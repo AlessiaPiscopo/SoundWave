@@ -1,13 +1,27 @@
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
+import styled from "styled-components";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
+    <>
+      <Router>
+        <div className="main-wrapper">
+          <GlobalStyles />
 
-      </header>
-    </div>
+          <Switch>
+            <div className="homepage"></div>
+            <div className="feed"></div>
+            <div className="profile"></div>
+          </Switch>
+        </div>
+      </Router>
+    </>
   );
-}
+};
+
+const Homepage = styled.div``;
+const Feed = styled.div``;
+const Profile = styled.div``;
 
 export default App;
