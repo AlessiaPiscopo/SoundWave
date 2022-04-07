@@ -1,27 +1,30 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import GlobalStyles from "./GlobalStyles";
-import styled from "styled-components";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import GlobalStyles from "./components/GlobalStyles";
+
+import HomePage from "./components/Home/HomePage";
 
 const App = () => {
   return (
     <>
-      <Router>
-        <div className="main-wrapper">
-          <GlobalStyles />
+      <BrowserRouter>
+      <div className="main-wrapper">
+        <GlobalStyles />
+        <div>hello</div>
 
-          <Switch>
-            <div className="homepage"></div>
-            <div className="feed"></div>
-            <div className="profile"></div>
-          </Switch>
-        </div>
-      </Router>
+        <Switch>
+        <Route to="/" component={HomePage} />
+
+        <div className="feed"></div>
+        <div className="profile"></div>
+        </Switch>
+      </div>
+      </BrowserRouter>
     </>
   );
 };
 
-const Homepage = styled.div``;
-const Feed = styled.div``;
-const Profile = styled.div``;
+// const Homepage = styled.div``;
+// const Feed = styled.div``;
+// const Profile = styled.div``;
 
 export default App;
