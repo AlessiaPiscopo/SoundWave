@@ -1,23 +1,20 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import GlobalStyles from "./components/GlobalStyles";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import GlobalStyles from "./GlobalStyles";
 
-import HomePage from "./components/Home/HomePage";
+import HomePage from "./components/home/HomePage";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
-      <div className="main-wrapper">
         <GlobalStyles />
-        <div>hello</div>
 
-        <Switch>
-        <Route to="/" component={HomePage} />
+        <Routes>
+          <Route exact path="/" element={<HomePage />} />
 
-        <div className="feed"></div>
-        <div className="profile"></div>
-        </Switch>
-      </div>
+          {/* <div className="feed">feed</div>
+          <div className="profile">profile</div> */}
+        </Routes>
       </BrowserRouter>
     </>
   );
