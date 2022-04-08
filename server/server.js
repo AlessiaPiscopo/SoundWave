@@ -12,4 +12,4 @@ app.use(cors());
 
 // Endpoints go here
 
-app.listen(PORT, () => console.log(`Listening on Port ${PORT}...`));
+app.listen(PORT, () => console.log(`🍉 Listening on Port ${PORT}...`));

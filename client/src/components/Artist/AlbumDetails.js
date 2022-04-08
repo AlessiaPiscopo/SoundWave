@@ -31,8 +31,6 @@ const AlbumDetails = () => {
           <button className="wishlist"></button>
           {/* supported by */}
         </div>
-
-        <div className="right-column"></div>
       </div>
     </>
   );

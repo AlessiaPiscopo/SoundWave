@@ -18,7 +18,21 @@ const Artist = () => {
           </div>
         </div>
 
-        
+        <div className="right-column">
+          {/* <ArtistBio /> */}
+          <div className="profile-pic"></div>
+          <div className="artist">Boy Pablo</div>
+          <div className="location">Bergen, Norway</div>
+          <button>Follow</button>
+          <div className="about-me-blurb"></div>
+          <div className="socials"></div>
+          <div className="artist-shows-preview">
+            {/* List of shows... first 2-3 dates... "more shows..." link to <ArtistShows /> */}
+          </div>
+          <div className="discography-preview">
+              {/* Same as shows? ... "more releases..." */}
+          </div>
+        </div>
       </div>
     </>
   );
