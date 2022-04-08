@@ -1,8 +1,12 @@
 const express = require("express");
+
+// allows us to have a .env file for our environment variables
+const dotenv = require("dotenv").config();
+const port = process.env.PORT || 8000;
+
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const PORT = 8000;
 
 const app = express();
 
@@ -15,4 +19,4 @@ app.use(cors());
 
 app.use("/api/users", require("./routes/userRoutes"));
 
-app.listen(PORT, () => console.log(`🍉 Listening on Port ${PORT}...`));
+app.listen(port, () => console.log(`🍉 Listening on Port ${port}...`));
