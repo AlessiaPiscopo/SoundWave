@@ -1,6 +1,6 @@
-import Collection from "../Collection";
-import Wishlist from "../Wishlist";
-import Following from "../Following";
+import Collection from "../components/Profile/Collection";
+import Wishlist from "../components/Profile/Wishlist";
+import Following from "../components/Profile/Following";
 
 const ProfilePage = () => {
   return (
@@ -16,7 +16,8 @@ const ProfilePage = () => {
         <div className="about-you"></div>
       </section>
 
-      <div className="tabs">
+      {/* MenuBar component */}
+      <div className="menu-bar">
         <Collection />
         <Wishlist />
         <Following />

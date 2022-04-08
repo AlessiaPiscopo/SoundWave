@@ -1,13 +1,9 @@
-// TODO: auth0 vs bcrypt
+import styled from "styled-components";
 
-// ideas:
-// - show/hide eye icon
-// - confirm pass pops up after typing pass
-
-const SignUp = () => {
+const Login = () => {
   return (
     <>
-      <header>Sign Up</header>
+      <header>Login</header>
       <form>
         <Username
           type="text"
@@ -33,16 +29,10 @@ const SignUp = () => {
           // ref={password}
           // onChange={handleChange}
         ></Password>
-        <ConfirmPassword
-          type="password"
-          name="confirm-password"
-          required
-          placeholder="Confirm Password"
-          ref={confirmPassword}
-          onChange={handleChange}
-        ></ConfirmPassword>
 
-        <button className="sign-up">Sign Up</button>
+        <button className="login">Login</button>
+
+        <div>Don't have an account yet? Sign up here.</div>
       </form>
     </>
   );
@@ -51,7 +41,6 @@ const SignUp = () => {
 const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
-const ConfirmPassword = styled.input``;
 // const SignUpBtn = styled.button``;
 
-export default SignUp;
+export default Login;
