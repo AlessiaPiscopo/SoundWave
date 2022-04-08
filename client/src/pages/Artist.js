@@ -18,17 +18,7 @@ const Artist = () => {
           </div>
         </div>
 
-        <div className="left-column">
-          <>
-            <div className="album-name">Soy Pablo</div>
-            <div className="artist">by Boy Pablo</div>
-          </>
-          {/* <TrackPlayer /> */}
-        </div>
-
-        <div className="center-column"></div>
-
-        <div className="right-column"></div>
+        
       </div>
     </>
   );
