@@ -1,3 +1,5 @@
+"use strict";
+
 const express = require("express");
 
 // allows us to have a .env file for our environment variables
@@ -12,6 +14,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(express.static("public"));
 
 app.use(morgan("tiny"));
 app.use(helmet());
