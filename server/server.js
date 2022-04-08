@@ -10,6 +10,9 @@ app.use(morgan("tiny"));
 app.use(helmet());
 app.use(cors());
 
-// Endpoints go here
+// -----------------------------------------
+
+// points to the userRoutes file
+app.use("/api/users", require("./routes/userRoutes"))
 
 app.listen(PORT, () => console.log(`🍉 Listening on Port ${PORT}...`));
