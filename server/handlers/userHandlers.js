@@ -1,9 +1,36 @@
 "use strict";
 
+const { MongoClient } = require("mongodb");
+require("dotenv").config({ path: "../.env" });
+const { MONGO_URI } = process.env;
+
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
+
+const client = new MongoClient(MONGO_URI, options);
+const db = client.db("FinalProject");
+
 // @desc Get users
 // @route GET /api/users
-const getUsers = (req, res) => {
-  res.status(200).json({ status: 200, message: "Get users ✅" });
+const getUsers = async (req, res) => {
+  try {
+    await client.connect();
+    console.log("Connected to database");
+
+    res.status(200).json({ status: 200, message: "Get users ✅" });
+  } catch (err) {
+    console.log(err);
+
+    return res.status(500).json({
+      status: 500,
+      message: "Error 500 - Internal Server Error",
+    });
+  } finally {
+    client.close();
+    console.log("Disconnected from database");
+  }
 };
 
 // @desc Create new user
