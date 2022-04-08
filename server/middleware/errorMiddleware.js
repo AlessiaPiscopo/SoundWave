@@ -1,0 +1,1 @@
+// middleware are just functions that execute when you make a request in the req/res cycle
