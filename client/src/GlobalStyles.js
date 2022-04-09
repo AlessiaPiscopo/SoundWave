@@ -18,8 +18,12 @@ export default createGlobalStyle`
 }
 
 html {
-  --color-background: #181A1C;
-  --color-text: #C8C3BC;
+
+  --color-almost-black: #181A1C;
+  --color-cadet-grey: #8c9a9e;
+  --color-silver-sand: #c4cbca;
+  --color-light: #C8C3BC;
+
 }
 
 /* Allow percentage-based heights in the application */
@@ -34,10 +38,12 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   /* font-family: "Helvetica Neue", sans-serif; */
-  background-color: var(--color-background);
+  /* font-family: "Roboto Mono", Menlo, monospace; */
   font-family: Menlo, monospace;
-  color: var(--color-text);
-  padding: 10px;
+  font-size: 14px;
+  background-color: var(--color-silver-sand);
+  color: var(--color-text-dark);
+  /* padding: 1rem; */
 }
 
 /* Improve media defaults */
@@ -54,6 +60,10 @@ input, button, textarea, select {
 /* Avoid text overflows */
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
+}
+
+p {
+  font-size: 14px;
 }
 
 /* Create a root stacking context */
