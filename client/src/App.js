@@ -1,3 +1,5 @@
+// Name ideas: Delay, Scene, Harmonics, Analog, some cool-sounding planet or star, Modular (like React lol), Synthesis, 
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyles from "./GlobalStyles";
 
