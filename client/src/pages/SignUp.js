@@ -1,9 +1,12 @@
 import styled from "styled-components";
+import SignUpAs from "../components/SignUpAs";
 
 const SignUp = () => {
   return (
     <>
-      <header>Sign Up</header>
+      <SignUpAs />
+
+      {/* <header>Sign Up</header>
       <form>
         <Username
           type="text"
@@ -41,7 +44,7 @@ const SignUp = () => {
         <button className="sign-up">Sign Up</button>
 
         <div>Already have an account? Login here.</div>
-      </form>
+      </form> */}
     </>
   );
 };
