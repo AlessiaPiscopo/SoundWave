@@ -39,7 +39,7 @@ const createUser = async (req, res) => {
   try {
     await client.connect();
     console.log("Connected to database");
-    res.status(200).json({ status: 200, message: "Create user ✅" });
+    res.status(201).json({ status: 201, message: "Create user ✅" });
   } catch (err) {
     console.log(err);
 
