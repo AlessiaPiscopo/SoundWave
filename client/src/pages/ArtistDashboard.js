@@ -1,7 +1,9 @@
+import Container from "../components/StyledElements/Container";
+
 const ArtistDashboard = () => {
   return (
     <>
-      <div>Artist Dashboard</div>
+      <Container>Artist Dashboard</Container>
     </>
   );
 };
