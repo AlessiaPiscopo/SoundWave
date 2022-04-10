@@ -15,6 +15,7 @@ const ArtistSignUp = () => {
               required
               placeholder="Artist/Band Name"
             ></ArtistName>
+            {/*  */}
             <Username
               type="text"
               name="username"
