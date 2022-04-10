@@ -13,6 +13,9 @@
   - [Usage](#usage)
   - [Project Status](#project-status)
   - [Future Features & Additions](#future-features--additions)
+    - [To do:](#to-do)
+    - [Stuff I Learned](#stuff-i-learned)
+    - [Stuff I Would Now Like to Learn](#stuff-i-would-now-like-to-learn)
   - [Acknowledgements](#acknowledgements)
   - [Contact](#contact)
 - [The App](#the-app)
@@ -78,15 +81,18 @@ Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are
 ## Future Features & Additions
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-To do:
+### To do:
 - more functionality for fan account
-- more form validation for artist signup
+- more form validation for artist sign-up
 - react spring
 - terms of use dialog box 
 
-Room for improvement:
-- Improvement to be done 1
-- Improvement to be done 2
+### Stuff I Learned
+
+### Stuff I Would Now Like to Learn
+- experiment with useReducer hook in the place of useContext hook
+- CSS BEM notation
+- CSS modules 
 
 
 ## Acknowledgements

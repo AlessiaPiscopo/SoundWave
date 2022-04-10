@@ -1,5 +1,9 @@
-const  = () => {
-    return (  );
-}
- 
-export default ;
+const ArtistDashboard = () => {
+  return (
+    <>
+      <div>Artist Dashboard</div>
+    </>
+  );
+};
+
+export default ArtistDashboard;

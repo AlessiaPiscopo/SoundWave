@@ -8,6 +8,7 @@ import LogIn from "./pages/LogIn";
 import Profile from "./pages/Profile";
 import Artist from "./pages/Artist";
 import NavBar from "./components/NavBar/NavBar";
+import ArtistDashboard from "./pages/ArtistDashboard";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route exact path="/profile" element={<Profile />} />
 
           <Route exact path="/artist" element={<Artist />} />
+          <Route exact path="/artist-dashboard" element={<ArtistDashboard />} />
         </Routes>
       </BrowserRouter>
     </>
