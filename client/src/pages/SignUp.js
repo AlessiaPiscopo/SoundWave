@@ -1,58 +1,53 @@
+import { useState } from "react";
 import styled from "styled-components";
-import SignUpAs from "../components/SignUpAs";
+import Container from "../components/StyledElements/Container";
+import ArtistSignUp from "../components/SignUp/ArtistSignUp";
+import FanSignUp from "../components/SignUp/FanSignUp";
 
 const SignUp = () => {
+  const [artistClicked, setArtistClicked] = useState(false);
+  const [fanClicked, setFanClicked] = useState(false);
+
+  const handleArtistClick = () => {
+    setArtistClicked(true);
+  };
+  const handleFanClick = () => {
+    setFanClicked(true);
+  };
+
+  if (artistClicked) {
+    return <ArtistSignUp />;
+  } else if (fanClicked) {
+    return <FanSignUp />;
+  }
+
   return (
     <>
-      <SignUpAs />
+      <Container>
+        <header>Sign Up As</header>
+        <ArtistOption>
+          <p>
+            Sell directly to your fans with total control over your music and
+            pricing. Easy access to your customers' data, real-time stats, music
+            chart reporting, and more.
+          </p>
+          <button onClick={handleArtistClick}>Artist</button>
+        </ArtistOption>
 
-      {/* <header>Sign Up</header>
-      <form>
-        <Username
-          type="text"
-          name="username"
-          required
-          placeholder="Username"
-          // ref={username}
-          // onChange={handleChange}
-        ></Username>
-        <Email
-          type="email"
-          name="email"
-          required
-          placeholder="Email Address"
-          // ref={username}
-          // onChange={handleChange}
-        ></Email>
-        <Password
-          type="password"
-          name="password"
-          required
-          placeholder="Password"
-          // ref={password}
-          // onChange={handleChange}
-        ></Password>
-        <ConfirmPassword
-          type="password"
-          name="confirm-password"
-          required
-          placeholder="Confirm Password"
-          // ref={confirmPassword}
-          // onChange={handleChange}
-        ></ConfirmPassword>
-
-        <button className="sign-up">Sign Up</button>
-
-        <div>Already have an account? Login here.</div>
-      </form> */}
+        <FanOption>
+          <p>
+            Follow your favorite artists, keep a wishlist, get instant streaming
+            of your purchases, showcase your collection, and explore the music
+            of like-minded fans.
+          </p>
+          <button onClick={handleFanClick}>Fan</button>
+        </FanOption>
+      </Container>
     </>
   );
 };
 
-const Username = styled.input``;
-const Email = styled.input``;
-const Password = styled.input``;
-const ConfirmPassword = styled.input``;
-// const SignUpBtn = styled.button``;
+const ArtistOption = styled(Container)``;
+const FanOption = styled(Container)``;
 
 export default SignUp;

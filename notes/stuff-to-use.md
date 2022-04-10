@@ -10,4 +10,9 @@
 ```
 
 - [ ] react spring
-- [ ] routes folder for endpoints
+
+
+### React icons
+
+import { CgShapeZigzag } from "react-icons/cg";
+

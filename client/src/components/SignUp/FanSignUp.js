@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Container from "../components/StyledElements/Container";
+import Container from "../StyledElements/Container";
 
-const LogIn = () => {
+const FanSignUp = () => {
   return (
     <>
       <Container>
-        <header>Login</header>
+      <header>Sign Up As A Fan</header>
         <form>
           <Username
             type="text"
@@ -32,12 +32,20 @@ const LogIn = () => {
             // ref={password}
             // onChange={handleChange}
           ></Password>
+          <ConfirmPassword
+            type="password"
+            name="confirm-password"
+            required
+            placeholder="Confirm Password"
+            // ref={confirmPassword}
+            // onChange={handleChange}
+          ></ConfirmPassword>
 
-          <button className="login">Login</button>
+          <button className="sign-up">Sign Up</button>
 
           <div>
-            Don't have an account yet?
-            <NavLink to="/signup">Sign up here</NavLink>.
+            Already have an account?
+            <NavLink to="/login">Log in here</NavLink>.
           </div>
         </form>
       </Container>
@@ -48,5 +56,6 @@ const LogIn = () => {
 const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
+const ConfirmPassword = styled.input``;
 
-export default LogIn;
+export default FanSignUp;
