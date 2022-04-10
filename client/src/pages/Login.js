@@ -1,39 +1,46 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import Container from "../components/common/Container";
 
-const Login = () => {
+const LogIn = () => {
   return (
     <>
-      <header>Login</header>
-      <form>
-        <Username
-          type="text"
-          name="username"
-          required
-          placeholder="Username"
-          // ref={username}
-          // onChange={handleChange}
-        ></Username>
-        <Email
-          type="email"
-          name="email"
-          required
-          placeholder="Email Address"
-          // ref={username}
-          // onChange={handleChange}
-        ></Email>
-        <Password
-          type="password"
-          name="password"
-          required
-          placeholder="Password"
-          // ref={password}
-          // onChange={handleChange}
-        ></Password>
+      <Container>
+        <header>Login</header>
+        <form>
+          <Username
+            type="text"
+            name="username"
+            required
+            placeholder="Username"
+            // ref={username}
+            // onChange={handleChange}
+          ></Username>
+          <Email
+            type="email"
+            name="email"
+            required
+            placeholder="Email Address"
+            // ref={username}
+            // onChange={handleChange}
+          ></Email>
+          <Password
+            type="password"
+            name="password"
+            required
+            placeholder="Password"
+            // ref={password}
+            // onChange={handleChange}
+          ></Password>
 
-        <button className="login">Login</button>
+          <button className="login">Login</button>
 
-        <div>Don't have an account yet? Sign up here.</div>
-      </form>
+          <div>
+            Don't have an account yet?
+            <NavLink to="/signup">Sign up here</NavLink>.
+          </div>
+        </form>
+      </Container>
     </>
   );
 };
@@ -41,6 +48,5 @@ const Login = () => {
 const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
-// const SignUpBtn = styled.button``;
 
-export default Login;
+export default LogIn;

@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
   return (
-    <Container>
+    <Wrapper>
       <Logo>
         <RiSoundModuleFill />
         Delay
@@ -15,16 +15,17 @@ const NavBar = () => {
         <StyledNavLink to="/signup">sign up</StyledNavLink>
         <StyledNavLink to="/login">log in</StyledNavLink>
       </Nav>
-    </Container>
+    </Wrapper>
   );
 };
 
-const Container = styled.div`
+const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   gap: 1rem;
   min-height: fit-content;
   background-color: var(--color-almost-white);
+  padding: 15px;
 `;
 
 const Logo = styled.h3`

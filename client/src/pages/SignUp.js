@@ -1,50 +1,60 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import SignUpAs from "../components/SignUpAs";
+import Container from "../components/common/Container";
 
 const SignUp = () => {
   return (
     <>
-      <SignUpAs />
+      <Container>
+        <header>Sign Up As</header>
+        <div>Artist</div>
+        <div>Fan</div>
+      </Container>
 
-      {/* <header>Sign Up</header>
-      <form>
-        <Username
-          type="text"
-          name="username"
-          required
-          placeholder="Username"
-          // ref={username}
-          // onChange={handleChange}
-        ></Username>
-        <Email
-          type="email"
-          name="email"
-          required
-          placeholder="Email Address"
-          // ref={username}
-          // onChange={handleChange}
-        ></Email>
-        <Password
-          type="password"
-          name="password"
-          required
-          placeholder="Password"
-          // ref={password}
-          // onChange={handleChange}
-        ></Password>
-        <ConfirmPassword
-          type="password"
-          name="confirm-password"
-          required
-          placeholder="Confirm Password"
-          // ref={confirmPassword}
-          // onChange={handleChange}
-        ></ConfirmPassword>
+      <Container>
+        <header>Sign Up</header>
+        <form>
+          <Username
+            type="text"
+            name="username"
+            required
+            placeholder="Username"
+            // ref={username}
+            // onChange={handleChange}
+          ></Username>
+          <Email
+            type="email"
+            name="email"
+            required
+            placeholder="Email Address"
+            // ref={username}
+            // onChange={handleChange}
+          ></Email>
+          <Password
+            type="password"
+            name="password"
+            required
+            placeholder="Password"
+            // ref={password}
+            // onChange={handleChange}
+          ></Password>
+          <ConfirmPassword
+            type="password"
+            name="confirm-password"
+            required
+            placeholder="Confirm Password"
+            // ref={confirmPassword}
+            // onChange={handleChange}
+          ></ConfirmPassword>
 
-        <button className="sign-up">Sign Up</button>
+          <button className="sign-up">Sign Up</button>
 
-        <div>Already have an account? Login here.</div>
-      </form> */}
+          <div>
+            Already have an account?
+            <NavLink to="/login">Log in here</NavLink>.
+          </div>
+        </form>
+      </Container>
     </>
   );
 };
@@ -53,6 +63,5 @@ const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
 const ConfirmPassword = styled.input``;
-// const SignUpBtn = styled.button``;
 
 export default SignUp;
