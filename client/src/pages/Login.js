@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Container from "../components/common/Container";
+import Container from "../components/StyledElements/Container";
 
 const LogIn = () => {
   return (

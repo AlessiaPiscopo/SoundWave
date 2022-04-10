@@ -1,19 +1,25 @@
 import { useState } from "react";
 import styled from "styled-components";
-import Container from "../components/common/Container";
+import Container from "../components/StyledElements/Container";
 import ArtistSignUp from "../components/SignUp/ArtistSignUp";
 import FanSignUp from "../components/SignUp/FanSignUp";
 
 const SignUp = () => {
-  const [artistBtnClicked, setArtistBtnClicked] = useState(false);
-  // const [fanBtnClicked, setFanBtnClicked] = useState(false);
+  const [artistClicked, setArtistClicked] = useState(false);
+  const [fanClicked, setFanClicked] = useState(false);
 
-  const handleArtistBtnClick = () => {
-    setArtistBtnClicked(true);
+  const handleArtistClick = () => {
+    setArtistClicked(true);
   };
-  const handleFanBtnClick = () => {
-    setArtistBtnClicked(false);
+  const handleFanClick = () => {
+    setFanClicked(true);
   };
+
+  if (artistClicked) {
+    return <ArtistSignUp />;
+  } else if (fanClicked) {
+    return <FanSignUp />;
+  }
 
   return (
     <>
@@ -25,7 +31,7 @@ const SignUp = () => {
             pricing. Easy access to your customers' data, real-time stats, music
             chart reporting, and more.
           </p>
-          <button onClick={handleArtistBtnClick}>Artist</button>
+          <button onClick={handleArtistClick}>Artist</button>
         </ArtistOption>
 
         <FanOption>
@@ -34,10 +40,9 @@ const SignUp = () => {
             of your purchases, showcase your collection, and explore the music
             of like-minded fans.
           </p>
-          <button onClick={handleFanBtnClick}>Fan</button>
+          <button onClick={handleFanClick}>Fan</button>
         </FanOption>
       </Container>
-      {/* {artistBtnClicked ? <ArtistSignUp /> : <FanSignUp />} */}
     </>
   );
 };

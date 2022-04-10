@@ -12,3 +12,7 @@
 - [ ] react spring
 
 
+### React icons
+
+import { CgShapeZigzag } from "react-icons/cg";
+

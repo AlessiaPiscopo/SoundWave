@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
 import { RiSoundModuleFill } from "react-icons/ri";
+
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {

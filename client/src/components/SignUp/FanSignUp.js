@@ -1,13 +1,12 @@
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Container from "../common/Container";
+import Container from "../StyledElements/Container";
 
 const FanSignUp = () => {
   return (
     <>
-      <SignUpAsModal />
-
       <Container>
-        <header>Sign Up As A Fan</header>
+      <header>Sign Up As A Fan</header>
         <form>
           <Username
             type="text"

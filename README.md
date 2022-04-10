@@ -18,8 +18,18 @@
 - [The App](#the-app)
   - [Functionality](#functionality)
   - [Signup/Login](#signuplogin)
-  - [Navbar & Search Bar](#navbar--search-bar)
-  - [Stretch](#stretch)
+  - [--- FANS](#----fans)
+  - [Navbar](#navbar)
+    - [Search bar](#search-bar)
+  - [Music Feed](#music-feed)
+  - [Wishlist (fan)](#wishlist-fan)
+  - [Profile](#profile)
+    - [Dropdown Menu](#dropdown-menu)
+  - [Collection](#collection)
+  - [Wishlist](#wishlist)
+  - [--- ARTISTS](#----artists)
+  - [Sign Up](#sign-up)
+  - [-- Stretch](#---stretch)
 <!-- * [License](#license) -->
 
 
@@ -110,11 +120,76 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
 
 - [ ] login as artist/fan
 
-## Navbar & Search Bar
+## --- FANS
+
+## Navbar
 
 - [ ] logo link to home/dashboard
+- [ ] search bar
+- [ ] music feed icon
+- [ ] wishlist icon
+- [ ] profile avatar
 
-## Stretch 
+### Search bar
+- search for artist, album, or track
+
+## Music Feed 
+- [ ] displays new releases and updates from fans and artists the user follows
+
+## Wishlist (fan)
+- [ ] user can add albums to wishlist 
+
+## Profile
+- [ ] info band (if !loggedInUser)
+  - "This is user's music collection."  
+    - <button>Start your own!</button>
+      - onClick: fan signup page
+- [ ] banner image
+- [ ] profile picture
+- [ ] username
+- [ ] follow button (if !loggedInUser)
+- [ ] collection
+- [ ] wishlist
+- [ ] following
+
+### Dropdown Menu
+- [ ] username - link to Profile page
+- [ ] purchases 
+  - [ ] purchase history
+- settings
+- help 
+- [ ] log out
+
+## Collection 
+- [ ] album cards of purchased albums appear here 
+- [ ] comment box and favorite track select appears on first album in collection
+  - [ ] save button posts comment and favorite track to artist page
+  - [ ] cancel button hides box
+
+## Wishlist 
+- [ ] displays albums in wishlist
+- pre-order, sold-out labels
+- appears in *numSold collections*
+  - show one comment by a fan
+  - avatar grid of fans who have this album in their collection
+
+---
+
+## --- ARTISTS
+
+## Sign Up
+
+- [ ] [sign up landing page](https://bandcamp.com/artists?from=menubar)
+  - [ ] "Bandcamp is an online record store and music community where passionate fans discover, connect with, and directly support the artists they love. <button>Sign up now</button>" 
+- [ ] sign up form
+  - [ ] main
+  - [ ] more details 
+    - [ ] "Welcome, artistName!"
+    - [ ] <select>Genre</select>
+      - [ ] <div>Your genre selection determines where your music appears in Bandcamp Discover. It’s OK if you don’t fit perfectly within one of these - just use the genre tag field, below, to provide more granularity.</div>
+
+## -- Stretch
 
 - more functionality for fan account
 - react spring
+- terms of use dialog box 
