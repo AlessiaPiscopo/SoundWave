@@ -6,7 +6,7 @@ import { RiSoundModuleFill } from "react-icons/ri";
 import { ThemeContext } from "../../context/ThemeContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 
-const NavBar = () => {
+const FanNavBar = () => {
   const { toggleTheme, lightTheme } = useContext(ThemeContext);
 
   return (
@@ -58,4 +58,4 @@ const Nav = styled.div`
 
 const StyledNavLink = styled(NavLink)``;
 
-export default NavBar;
+export default FanNavBar;
