@@ -21,15 +21,15 @@
   - [--- FANS](#----fans)
   - [Navbar](#navbar)
     - [Search bar](#search-bar)
-  - [Music Feed](#music-feed)
-  - [Wishlist (fan)](#wishlist-fan)
-  - [Profile](#profile)
+    - [Music Feed](#music-feed)
+    - [Wishlist](#wishlist)
+    - [Profile](#profile)
     - [Dropdown Menu](#dropdown-menu)
   - [Collection](#collection)
-  - [Wishlist](#wishlist)
+  - [Wishlist](#wishlist-1)
   - [--- ARTISTS](#----artists)
   - [Sign Up](#sign-up)
-  - [-- Stretch](#---stretch)
+  - [-- Future Features/Additions](#---future-featuresadditions)
 <!-- * [License](#license) -->
 
 
@@ -133,13 +133,13 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
 ### Search bar
 - search for artist, album, or track
 
-## Music Feed 
+### Music Feed 
 - [ ] displays new releases and updates from fans and artists the user follows
 
-## Wishlist (fan)
+### Wishlist
 - [ ] user can add albums to wishlist 
 
-## Profile
+### Profile
 - [ ] info band (if !loggedInUser)
   - "This is user's music collection."  
     - <button>Start your own!</button>
@@ -181,15 +181,27 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
 
 - [ ] [sign up landing page](https://bandcamp.com/artists?from=menubar)
   - [ ] "Bandcamp is an online record store and music community where passionate fans discover, connect with, and directly support the artists they love. <button>Sign up now</button>" 
+
 - [ ] sign up form
-  - [ ] main
-  - [ ] more details 
+
+  - [ ] 1. general info form
+
+  - [ ] 2. more details form
     - [ ] "Welcome, artistName!"
     - [ ] <select>Genre</select>
       - [ ] <div>Your genre selection determines where your music appears in Bandcamp Discover. It’s OK if you don’t fit perfectly within one of these - just use the genre tag field, below, to provide more granularity.</div>
+    - Genre tag(s) - "Optional. Use a comma to separate multiple tags."
+    - [ ] location - placeholder: e.g. Montreal, QC
+    - [ ] <button>Next</button>
 
-## -- Stretch
+  - [ ] 3. your url form
+    - [ ] One last thing. Your address on Bandcamp will be: <input type=text placeholder={artistName}>.bandcamp.com
+  - [ ] If you prefer to set this up as a custom domain (e.g., `music.${artistName}.com`), you can do that later, as part of Bandcamp Pro. 
+  - [ ] <button>Done</button> // btn 300px
+
+## -- Future Features/Additions
 
 - more functionality for fan account
+- more form validation for artist signup
 - react spring
 - terms of use dialog box 
