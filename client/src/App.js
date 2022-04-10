@@ -7,14 +7,15 @@ import SignUp from "./pages/SignUp";
 import LogIn from "./pages/LogIn";
 import Profile from "./pages/Profile";
 import Artist from "./pages/Artist";
-import NavBar from "./components/NavBar/NavBar";
+import FanNavBar from "./components/NavBar/FanNavBar";
+import ArtistDashboard from "./pages/ArtistDashboard";
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
         <GlobalStyles />
-        <NavBar />
+        <FanNavBar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/dashboard" element={<Dashboard />} />
@@ -25,6 +26,7 @@ const App = () => {
           <Route exact path="/profile" element={<Profile />} />
 
           <Route exact path="/artist" element={<Artist />} />
+          <Route exact path="/artist-dashboard" element={<ArtistDashboard />} />
         </Routes>
       </BrowserRouter>
     </>

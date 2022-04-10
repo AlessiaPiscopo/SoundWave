@@ -1,3 +1,2 @@
 # Questions
 
-- [ ] gitignore

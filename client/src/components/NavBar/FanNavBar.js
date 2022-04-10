@@ -1,10 +1,14 @@
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
 import { RiSoundModuleFill } from "react-icons/ri";
+import { ThemeContext } from "../../context/ThemeContext";
+import { BsSun, BsMoonStars } from "react-icons/bs";
 
-import { NavLink } from "react-router-dom";
+const FanNavBar = () => {
+  const { toggleTheme, lightTheme } = useContext(ThemeContext);
 
-const NavBar = () => {
   return (
     <Wrapper>
       <NavLink to="/">
@@ -17,6 +21,15 @@ const NavBar = () => {
       <Nav>
         <StyledNavLink to="/signup">sign up</StyledNavLink>
         <StyledNavLink to="/login">log in</StyledNavLink>
+        {lightTheme ? (
+          <button onClick={toggleTheme}>
+            <BsSun />
+          </button>
+        ) : (
+          <button onClick={toggleTheme}>
+            <BsMoonStars />
+          </button>
+        )}
       </Nav>
     </Wrapper>
   );
@@ -45,4 +58,4 @@ const Nav = styled.div`
 
 const StyledNavLink = styled(NavLink)``;
 
-export default NavBar;
+export default FanNavBar;
