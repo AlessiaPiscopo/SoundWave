@@ -1,18 +1,36 @@
-// See React Docs - [Context - Advanced Guide](https://reactjs.org/docs/context.html)
+import { createContext, useState } from "react";
 
-// Container StyledElement, currently:
+export const ThemeContext = createContext(null);
 
-// import styled from "styled-components";
+export const ThemeContextProvider = ({ children }) => {
+  const [lightTheme, setLightTheme] = useState(true);
+  const [darkTheme, setDarkTheme] = useState(false);
 
-// const Container = styled.div`
-//   border: 1px solid var(--color-light);
-//   padding: 15px;
-// `;
+  const darkThemeStyles = {
+    backgroundColor: "black",
+    color: "white",
+  };
+  const lightThemeStyles = {
+    backgroundColor: "white",
+    color: "black",
+  };
 
-// export default Container;
-
-const themes = {
-    light: {
-        bgColor: 
+  // target dark theme and toggle between enabled/disabled
+  const toggleTheme = () => {
+    if (lightTheme) {
+      setDarkTheme(true);
+      setLightTheme(!lightTheme);
+      console.log("dark theme toggled");
+    } else if (darkTheme) {
+      setDarkTheme(!darkTheme);
+      setLightTheme(true);
+      console.log("light theme toggled");
     }
+  };
+
+  return (
+    <ThemeContext.Provider value={{ toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };

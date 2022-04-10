@@ -13,13 +13,12 @@
   - [Usage](#usage)
   - [Project Status](#project-status)
   - [Future Features & Additions](#future-features--additions)
-    - [To do:](#to-do)
     - [Stuff I Learned](#stuff-i-learned)
     - [Stuff I Would Now Like to Learn](#stuff-i-would-now-like-to-learn)
   - [Acknowledgements](#acknowledgements)
   - [Contact](#contact)
 - [The App](#the-app)
-  - [Functionality](#functionality)
+  - [FUNCTIONALITY](#functionality)
   - [Signup/Login](#signuplogin)
   - [--- FANS](#----fans)
   - [Navbar](#navbar)
@@ -81,12 +80,6 @@ Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are
 ## Future Features & Additions
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
 
-### To do:
-- more functionality for fan account
-- more form validation for artist sign-up
-- react spring
-- terms of use dialog box 
-
 ### Stuff I Learned
 
 ### Stuff I Would Now Like to Learn
@@ -115,7 +108,7 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
 
 # The App
 
-## Functionality 
+## FUNCTIONALITY 
 
 - [x] land on homepage
 

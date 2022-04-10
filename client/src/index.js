@@ -1,13 +1,17 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
-import { CurrentArtistContext } from "./context/CurrentArtistContext";
+
+// import { CurrentArtistContextProvider } from "./context/CurrentArtistContext";
+import { ThemeContextProvider } from "./context/ThemeContext";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CurrentArtistContext.Provider value={"TheCats123"}>
+    <ThemeContextProvider>
+      {/* <CurrentArtistContextProvider value={"TheCats123"}> */}
       <App />
-    </CurrentArtistContext.Provider>
+      {/* </CurrentArtistContextProvider> */}
+    </ThemeContextProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );

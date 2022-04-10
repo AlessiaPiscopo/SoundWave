@@ -1,10 +1,14 @@
+import { NavLink } from "react-router-dom";
+import { useContext } from "react";
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
 import { RiSoundModuleFill } from "react-icons/ri";
-
-import { NavLink } from "react-router-dom";
+import { ThemeContext } from "../../context/ThemeContext";
+import { BsSun, BsMoonStars } from "react-icons/bs";
 
 const NavBar = () => {
+  const { toggleTheme, lightTheme, darkTheme } = useContext(ThemeContext);
+
   return (
     <Wrapper>
       <NavLink to="/">
@@ -17,6 +21,15 @@ const NavBar = () => {
       <Nav>
         <StyledNavLink to="/signup">sign up</StyledNavLink>
         <StyledNavLink to="/login">log in</StyledNavLink>
+        {lightTheme ? (
+          <button onClick={toggleTheme}>
+            <BsSun />
+          </button>
+        ) : (
+          <button onClick={toggleTheme}>
+            <BsMoonStars />
+          </button>
+        )}
       </Nav>
     </Wrapper>
   );
