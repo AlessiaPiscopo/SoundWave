@@ -6,10 +6,12 @@ import { NavLink } from "react-router-dom";
 const NavBar = () => {
   return (
     <Wrapper>
-      <Logo>
-        <RiSoundModuleFill />
-        Delay
-      </Logo>
+      <NavLink to="/">
+        <Logo>
+          <RiSoundModuleFill />
+          Delay
+        </Logo>
+      </NavLink>
       <SearchBar />
       <Nav>
         <StyledNavLink to="/signup">sign up</StyledNavLink>

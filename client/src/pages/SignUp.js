@@ -1,67 +1,48 @@
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
 import styled from "styled-components";
 import Container from "../components/common/Container";
+import ArtistSignUp from "../components/SignUp/ArtistSignUp";
+import FanSignUp from "../components/SignUp/FanSignUp";
 
 const SignUp = () => {
+  const [artistBtnClicked, setArtistBtnClicked] = useState(false);
+  // const [fanBtnClicked, setFanBtnClicked] = useState(false);
+
+  const handleArtistBtnClick = () => {
+    setArtistBtnClicked(true);
+  };
+  const handleFanBtnClick = () => {
+    setArtistBtnClicked(false);
+  };
+
   return (
     <>
       <Container>
         <header>Sign Up As</header>
-        <div>Artist</div>
-        <div>Fan</div>
+        <ArtistOption>
+          <p>
+            Sell directly to your fans with total control over your music and
+            pricing. Easy access to your customers' data, real-time stats, music
+            chart reporting, and more.
+          </p>
+          <button onClick={handleArtistBtnClick}>Artist</button>
+        </ArtistOption>
+
+        <FanOption>
+          <p>
+            Follow your favorite artists, keep a wishlist, get instant streaming
+            of your purchases, showcase your collection, and explore the music
+            of like-minded fans.
+          </p>
+          <button onClick={handleFanBtnClick}>Fan</button>
+        </FanOption>
       </Container>
-
-      <Container>
-        <header>Sign Up</header>
-        <form>
-          <Username
-            type="text"
-            name="username"
-            required
-            placeholder="Username"
-            // ref={username}
-            // onChange={handleChange}
-          ></Username>
-          <Email
-            type="email"
-            name="email"
-            required
-            placeholder="Email Address"
-            // ref={username}
-            // onChange={handleChange}
-          ></Email>
-          <Password
-            type="password"
-            name="password"
-            required
-            placeholder="Password"
-            // ref={password}
-            // onChange={handleChange}
-          ></Password>
-          <ConfirmPassword
-            type="password"
-            name="confirm-password"
-            required
-            placeholder="Confirm Password"
-            // ref={confirmPassword}
-            // onChange={handleChange}
-          ></ConfirmPassword>
-
-          <button className="sign-up">Sign Up</button>
-
-          <div>
-            Already have an account?
-            <NavLink to="/login">Log in here</NavLink>.
-          </div>
-        </form>
-      </Container>
+      {/* {artistBtnClicked ? <ArtistSignUp /> : <FanSignUp />} */}
     </>
   );
 };
 
-const Username = styled.input``;
-const Email = styled.input``;
-const Password = styled.input``;
-const ConfirmPassword = styled.input``;
+const ArtistOption = styled(Container)``;
+const FanOption = styled(Container)``;
 
 export default SignUp;

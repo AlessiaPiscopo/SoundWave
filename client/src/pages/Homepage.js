@@ -1,13 +1,5 @@
-
-
 const HomePage = () => {
-
-  return (
-    <>
-      {/* <header>Home</header> */}
-
-    </>
-  );
+  return <>{/* <header>Home</header> */}</>;
 };
 
 export default HomePage;
