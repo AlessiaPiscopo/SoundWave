@@ -12,7 +12,7 @@
   - [Setup](#setup)
   - [Usage](#usage)
   - [Project Status](#project-status)
-  - [Room for Improvement](#room-for-improvement)
+  - [Future Features & Additions](#future-features--additions)
   - [Acknowledgements](#acknowledgements)
   - [Contact](#contact)
 - [The App](#the-app)
@@ -29,7 +29,6 @@
   - [Wishlist](#wishlist-1)
   - [--- ARTISTS](#----artists)
   - [Sign Up](#sign-up)
-  - [-- Future Features/Additions](#---future-featuresadditions)
 <!-- * [License](#license) -->
 
 
@@ -76,16 +75,18 @@ Provide various use cases and code examples here.
 Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.
 
 
-## Room for Improvement
+## Future Features & Additions
 Include areas you believe need improvement / could be improved. Also add TODOs for future development.
+
+To do:
+- more functionality for fan account
+- more form validation for artist signup
+- react spring
+- terms of use dialog box 
 
 Room for improvement:
 - Improvement to be done 1
 - Improvement to be done 2
-
-To do:
-- Feature to be added 1
-- Feature to be added 2
 
 
 ## Acknowledgements
@@ -199,9 +200,3 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
   - [ ] If you prefer to set this up as a custom domain (e.g., `music.${artistName}.com`), you can do that later, as part of Bandcamp Pro. 
   - [ ] <button>Done</button> // btn 300px
 
-## -- Future Features/Additions
-
-- more functionality for fan account
-- more form validation for artist signup
-- react spring
-- terms of use dialog box 
