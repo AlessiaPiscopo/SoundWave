@@ -6,14 +6,14 @@ export const ThemeContextProvider = ({ children }) => {
   const [lightTheme, setLightTheme] = useState(true);
   const [darkTheme, setDarkTheme] = useState(false);
 
-  const darkThemeStyles = {
-    backgroundColor: "black",
-    color: "white",
-  };
-  const lightThemeStyles = {
-    backgroundColor: "white",
-    color: "black",
-  };
+  // const darkThemeStyles = {
+  //   backgroundColor: "black",
+  //   color: "white",
+  // };
+  // const lightThemeStyles = {
+  //   backgroundColor: "white",
+  //   color: "black",
+  // };
 
   // target dark theme and toggle between enabled/disabled
   const toggleTheme = () => {

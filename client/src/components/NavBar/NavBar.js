@@ -7,7 +7,7 @@ import { ThemeContext } from "../../context/ThemeContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 
 const NavBar = () => {
-  const { toggleTheme, lightTheme, darkTheme } = useContext(ThemeContext);
+  const { toggleTheme, lightTheme } = useContext(ThemeContext);
 
   return (
     <Wrapper>
