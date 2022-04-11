@@ -1,10 +1,11 @@
 import Container from "../components/StyledElements/Container";
 
-const ArtistDashboard = () => {
+const ArtistDashboard = ({ code }) => {
   return (
     <Container>
       <header>
         <h2>Welcome Artist! This is your dashboard.</h2>
+        <h2>{code}</h2>
       </header>
 
       <div className="column-1">
@@ -27,9 +28,7 @@ const ArtistDashboard = () => {
 
 export default ArtistDashboard;
 
-{
-  /* <div className="band">
+/* <div className="band">
   Get monthly updates on your sales and followers, plus tips for
   making the most of Bandcamp. Click here to opt in.
 </div> */
-}

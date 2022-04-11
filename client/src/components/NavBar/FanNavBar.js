@@ -5,6 +5,7 @@ import SearchBar from "./SearchBar";
 import { RiSoundModuleFill } from "react-icons/ri";
 import { ThemeContext } from "../../context/ThemeContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
+import Login from "../Login";
 
 const FanNavBar = () => {
   const { toggleTheme, lightTheme } = useContext(ThemeContext);
@@ -19,8 +20,9 @@ const FanNavBar = () => {
       </NavLink>
       <SearchBar />
       <Nav>
+        <Login />
         <StyledNavLink to="/signup">sign up</StyledNavLink>
-        <StyledNavLink to="/login">log in</StyledNavLink>
+        {/* <StyledNavLink to="/login">log in</StyledNavLink> */}
         {lightTheme ? (
           <button onClick={toggleTheme}>
             <BsSun />
