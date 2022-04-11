@@ -1,7 +1,5 @@
 # Stuff to Use
 
-- [ ] css transitions
-
 ```css
 .some-class {
     opacity: 0;
@@ -9,10 +7,6 @@
 }
 ```
 
-- [ ] react spring
 
 
-### React icons
-
-import { CgShapeZigzag } from "react-icons/cg";
 

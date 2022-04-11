@@ -1,19 +1,22 @@
-const Dropdown = ({ options }) => {
+import React from "react";
+
+const Dropdown = (props) => {
+  const dropdownChanged = (e) => {
+    props.changed(e.target.value);
+  };
+
   return (
-    <>
-      <div style={{display: "flex"}}>
-        <h3>Select a genre: </h3>
-        <select name="" id="">
-          {options.map((item, index) => {
-            return (
-              <option key={index} value={options.value}>
-                {item.name}
-              </option>
-            );
-          })}
-        </select>
-      </div>
-    </>
+    <div>
+      <label>{props.label}</label>
+      <select value={props.selectedValue} onChange={dropdownChanged}>
+        <option key={0}>Select...</option>
+        {props.options.map((item, idx) => (
+          <option key={idx + 1} value={item.id}>
+            {item.name}
+          </option>
+        ))}
+      </select>
+    </div>
   );
 };
 
