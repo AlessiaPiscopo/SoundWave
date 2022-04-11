@@ -23,9 +23,9 @@ const App = () => {
       <BrowserRouter>
         <GlobalStyles />
         <FanNavBar />
+        <Dropdown options={data} />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Dropdown data={data} />
           {/* <Route exact path="/dashboard" element={<Dashboard />} /> */}
 
           <Route exact path="/signup" element={<SignUp />} />

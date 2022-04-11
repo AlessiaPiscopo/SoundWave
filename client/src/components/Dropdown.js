@@ -1,11 +1,12 @@
-const Dropdown = ({ data }) => {
+const Dropdown = ({ options }) => {
   return (
     <>
-      <div>
+      <div style={{display: "flex"}}>
+        <h3>Select a genre: </h3>
         <select name="" id="">
-          {data.map((item, index) => {
+          {options.map((item, index) => {
             return (
-              <option key={index} value={data.value}>
+              <option key={index} value={options.value}>
                 {item.name}
               </option>
             );
