@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 8000;
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-const spotifyWebApi = require("spotify-web-api-node");
+const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
 

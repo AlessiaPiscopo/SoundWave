@@ -7,6 +7,7 @@ const HomePage = () => {
       <p>
         Discover amazing new music and directly support the artists who make it.
       </p>
+      <hr />
     </Container>
   );
 };
