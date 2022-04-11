@@ -31,6 +31,7 @@
   - [Wishlist](#wishlist-1)
   - [--- ARTISTS](#----artists)
   - [Sign Up](#sign-up)
+  - [Navbar](#navbar-1)
 <!-- * [License](#license) -->
 
 
@@ -199,3 +200,15 @@ Created by [@flynerdpl](https://www.flynerd.pl/) - feel free to contact me!
   - [ ] If you prefer to set this up as a custom domain (e.g., `music.${artistName}.com`), you can do that later, as part of Bandcamp Pro. 
   - [ ] <button>Done</button> // btn 300px
 
+## Navbar 
+
+- [ ] logo
+- [ ] dashboard
+- [ ] + add 
+  - [ ] album
+  - [ ] track
+  - merch
+  - livestream
+- stats
+  
+- 
