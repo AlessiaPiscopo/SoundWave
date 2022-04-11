@@ -33,5 +33,5 @@ THE PLAN
 
 - [ ] set up firebase
 - [ ] setup 2 inputs 
+  - [ ] img file (artist-profile-picture)
   - [ ] audio file
-  - [ ] img file 
