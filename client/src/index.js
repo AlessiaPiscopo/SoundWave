@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import App from "./App";
+import App from "./components/App";
 
 // import { CurrentArtistContextProvider } from "./context/CurrentArtistContext";
 import { ThemeContextProvider } from "./context/ThemeContext";
