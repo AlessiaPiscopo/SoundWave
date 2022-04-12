@@ -1,10 +1,10 @@
 import { useState } from "react";
 import styled from "styled-components";
 import Container from "../components/StyledElements/Container";
-import ArtistSignUp from "../components/SignUp/ArtistSignUp";
-import FanSignUp from "../components/SignUp/FanSignUp";
+import ArtistSignup from "../components/SignUp/ArtistSignup";
+import FanSignup from "../components/SignUp/FanSignup";
 
-const SignUp = () => {
+const Signup = () => {
   const [artistClicked, setArtistClicked] = useState(false);
   const [fanClicked, setFanClicked] = useState(false);
 
@@ -16,9 +16,9 @@ const SignUp = () => {
   };
 
   if (artistClicked) {
-    return <ArtistSignUp />;
+    return <ArtistSignup />;
   } else if (fanClicked) {
-    return <FanSignUp />;
+    return <FanSignup />;
   }
 
   return (
@@ -51,4 +51,4 @@ const SignUp = () => {
 const ArtistOption = styled(Container)``;
 const FanOption = styled(Container)``;
 
-export default SignUp;
+export default Signup;

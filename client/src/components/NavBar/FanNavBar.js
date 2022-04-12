@@ -2,9 +2,10 @@ import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
-import { RiSoundModuleFill } from "react-icons/ri";
+// import { RiSoundModuleFill } from "react-icons/ri";
 import { AppContext } from "../../context/AppContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
+import { CgShapeZigzag } from "react-icons/cg";
 
 const FanNavBar = () => {
   const { toggleTheme, lightTheme } = useContext(AppContext);
@@ -13,8 +14,10 @@ const FanNavBar = () => {
     <Wrapper>
       <NavLink to="/">
         <Logo>
-          <RiSoundModuleFill />
-          Delay
+          {/* <RiSoundModuleFill /> */}
+          <CgShapeZigzag />
+          {/* <img src="..../public/SoundWave-icon-opal.png" alt="" /> */}
+          SoundWave
         </Logo>
       </NavLink>
       <SearchBar />

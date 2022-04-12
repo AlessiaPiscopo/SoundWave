@@ -35,3 +35,5 @@ THE PLAN
 - [ ] setup 2 inputs 
   - [ ] img file (artist-profile-picture)
   - [ ] audio file
+
+

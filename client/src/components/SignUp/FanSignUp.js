@@ -2,11 +2,11 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../StyledElements/Container";
 
-const FanSignUp = () => {
+const FanSignup = () => {
   return (
     <>
       <Container>
-      <header>Sign Up As A Fan</header>
+        <header>Sign Up As A Fan</header>
         <form>
           <Username
             type="text"
@@ -58,4 +58,4 @@ const Email = styled.input``;
 const Password = styled.input``;
 const ConfirmPassword = styled.input``;
 
-export default FanSignUp;
+export default FanSignup;

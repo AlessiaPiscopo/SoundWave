@@ -1,22 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import GlobalStyles from "../GlobalStyles";
 import Homepage from "../pages/Homepage";
-import SignUp from "../pages/SignUp";
-// import Login from "./pages/Login";
+import Login from "../pages/Login";
+import Signup from "../pages/Signup";
+import FanNavBar from "./NavBar/FanNavBar";
+
 // import Profile from "./pages/Profile";
 // import Artist from "./pages/Artist";
-import FanNavBar from "./NavBar/FanNavBar";
 // import ArtistDashboard from "./pages/ArtistDashboard";
 
 const App = () => {
-  return (
+  return (  
     <>
       <BrowserRouter>
         <GlobalStyles />
         <FanNavBar />
         <Routes>
           <Route exact path="/" element={<Homepage />} />
-          <Route exact path="/signup" element={<SignUp />} />
+          <Route exact path="/signup" element={<Signup />} />
+          <Route exact path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>

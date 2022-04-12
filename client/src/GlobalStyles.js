@@ -23,6 +23,7 @@ html {
   --color-cadet-grey: #8c9a9e;
   --color-silver-sand: #c4cbca;
   --color-light: #C8C3BC;
+  --color-opal: #96bbbb;
 
 }
 
@@ -68,7 +69,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 /* Create a root stacking context */

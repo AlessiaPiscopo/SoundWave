@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Container from "../components/StyledElements/Container";
 
-const LogIn = () => {
+const Login = () => {
   return (
     <>
       <Container>
@@ -49,4 +49,4 @@ const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
 
-export default LogIn;
+export default Login;
