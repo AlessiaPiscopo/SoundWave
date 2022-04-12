@@ -1,3 +1,5 @@
+// move to .env
+
 const Credentials = () => {
   return {
     ClientId: "8c06763554494aec9c95bbc12997589f",

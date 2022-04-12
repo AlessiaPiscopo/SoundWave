@@ -2,4 +2,4 @@
 
 import { createContext } from "react";
 
-export const CurrentArtistContext = createContext(null);
+export const CurrentUserContext = createContext(null);
