@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
+import ArtistData from "../ArtistData";
 import Container from "../StyledElements/Container";
 
 const ArtistSignup = () => {
@@ -54,6 +55,8 @@ const ArtistSignup = () => {
             <NavLink to="/login">Log in here</NavLink>.
           </div>
         </form>
+        <hr />
+        <ArtistData />
       </Container>
     </>
   );
