@@ -42,6 +42,7 @@ const SignUp = () => {
           </p>
           <button onClick={handleFanClick}>Fan</button>
         </FanOption>
+        {/* <GenreDropdownWrapper /> */}
       </Container>
     </>
   );

@@ -3,11 +3,11 @@ import { useContext } from "react";
 import styled from "styled-components";
 import SearchBar from "./SearchBar";
 import { RiSoundModuleFill } from "react-icons/ri";
-import { ThemeContext } from "../../context/ThemeContext";
+import { AppContext } from "../../context/AppContext";
 import { BsSun, BsMoonStars } from "react-icons/bs";
 
 const FanNavBar = () => {
-  const { toggleTheme, lightTheme } = useContext(ThemeContext);
+  const { toggleTheme, lightTheme } = useContext(AppContext);
 
   return (
     <Wrapper>

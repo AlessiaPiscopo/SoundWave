@@ -27,9 +27,11 @@
 - artist uploads files from their comp
 - my app sends that to firebase/aws
 
+## UPLOADING ARTIST DATA FUNCTIONALITY
+
 THE PLAN
 
 - [ ] set up firebase
 - [ ] setup 2 inputs 
+  - [ ] img file (artist-profile-picture)
   - [ ] audio file
-  - [ ] img file 

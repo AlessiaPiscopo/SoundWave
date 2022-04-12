@@ -1,15 +1,12 @@
-import Container from "../components/StyledElements/Container";
+import GenreDropdownWrapper from "../components/GenreDropdown";
 
-const HomePage = () => {
+const Homepage = () => {
   return (
-    <Container>
-      <h3>Welcome to Delay</h3>
-      <p>
-        Discover amazing new music and directly support the artists who make it.
-      </p>
-      <hr />
-    </Container>
+    <>
+      <p>hello</p>
+      <GenreDropdownWrapper />
+    </>
   );
 };
 
-export default HomePage;
+export default Homepage;
