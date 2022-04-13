@@ -1,9 +1,14 @@
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import ArtistData from "../ArtistData";
+// import ArtistData from "../ArtistData";
 import Container from "../StyledElements/Container";
 
 const ArtistSignup = () => {
+  const handleArtistSignup = async () => {
+    console.log("form submitted");
+    // return <ArtistData />;
+  };
+
   return (
     <>
       <Container>
@@ -13,14 +18,13 @@ const ArtistSignup = () => {
           <ArtistName
             type="text"
             name="artist-name"
-            required
+            // required
             placeholder="Artist/Band Name"
           ></ArtistName>
-          {/*  */}
           <Username
             type="text"
             name="username"
-            required
+            // required
             placeholder="Username"
             // ref={username}
             // onChange={handleChange}
@@ -28,7 +32,7 @@ const ArtistSignup = () => {
           <Email
             type="email"
             name="email"
-            required
+            // required
             placeholder="Email Address"
             // ref={username}
             // onChange={handleChange}
@@ -36,27 +40,28 @@ const ArtistSignup = () => {
           <Password
             type="password"
             name="password"
-            required
+            // required
             placeholder="Password"
             // ref={password}
             // onChange={handleChange}
           ></Password>
-          <ConfirmPassword
+          {/* <ConfirmPassword
             type="password"
             name="confirm-password"
             required
             placeholder="Confirm Password"
             // ref={confirmPassword}
             // onChange={handleChange}
-          ></ConfirmPassword>
-          <button className="sign-up">Sign Up</button>
+          ></ConfirmPassword> */}
+          <button className="sign-up" onClick={handleArtistSignup}>
+            Sign Up
+          </button>
           <div>
             Already have an account?
             <NavLink to="/login">Log in here</NavLink>.
           </div>
         </form>
         <hr />
-        <ArtistData />
       </Container>
     </>
   );
@@ -66,6 +71,6 @@ const ArtistName = styled.input``;
 const Username = styled.input``;
 const Email = styled.input``;
 const Password = styled.input``;
-const ConfirmPassword = styled.input``;
+// const ConfirmPassword = styled.input``;
 
 export default ArtistSignup;
