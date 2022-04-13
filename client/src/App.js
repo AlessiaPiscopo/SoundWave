@@ -8,7 +8,7 @@ import FanNavBar from "./components/NavBar/FanNavBar";
 
 // import Profile from "./pages/Profile";
 // import Artist from "./pages/Artist";
-// import ArtistDashboard from "./pages/ArtistDashboard";
+import ArtistDashboard from "./pages/ArtistDashboard";
 
 const App = () => {
   return (
@@ -21,6 +21,8 @@ const App = () => {
           <Route exact path="/" element={<Homepage />} />
           <Route exact path="/signup" element={<Signup />} />
           <Route exact path="/login" element={<Login />} />
+          <Route exact path="/artist-dashboard" element={<Login />} />
+
         </Routes>
       </BrowserRouter>
     </>
