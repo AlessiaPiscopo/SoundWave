@@ -1,5 +1,8 @@
 # Artist User Data Structure
 
+# Learn how to structure data in Firestore: 
+- https://www.youtube.com/watch?v=lW7DWV2jST0&ab_channel=Firebase
+
 # Header <header>
 
 - ## Banner <img>

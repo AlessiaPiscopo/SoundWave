@@ -36,4 +36,6 @@ THE PLAN
   - [ ] img file (artist-profile-picture)
   - [ ] audio file
 
+## MISC
 
+- soundwave image attribution: Sound Waves by Alice Noir from NounProject.com

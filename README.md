@@ -110,3 +110,5 @@
   - [ ] timed album display gallery thing  
 - [ ] terms of use dialog box 
 - [ ] light/dark mode
+- [ ] modals 
+  - https://www.youtube.com/results?search_query=modal+react
