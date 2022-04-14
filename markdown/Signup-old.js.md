@@ -1,6 +1,9 @@
+// Signup.js OLD
+
+Signup.js OLD
+
 import { useState } from "react";
 import styled from "styled-components";
-import Container from "../components/StyledElements/Container";
 import ArtistSignup from "../components/SignUp/ArtistSignup";
 import FanSignup from "../components/SignUp/FanSignup";
 
@@ -22,8 +25,8 @@ const Signup = () => {
   }
 
   return (
-    <>
-      <Container>
+    <div className="signup">
+      <div className="signup-container">
         <header>Sign Up As</header>
         <ArtistOption>
           <p>
@@ -43,8 +46,8 @@ const Signup = () => {
           <button onClick={handleFanClick}>Fan</button>
         </FanOption>
         {/* <GenreDropdownWrapper /> */}
-      </Container>
-    </>
+      </div>
+    </div>
   );
 };
 
@@ -52,3 +55,4 @@ const ArtistOption = styled(Container)``;
 const FanOption = styled(Container)``;
 
 export default Signup;
+

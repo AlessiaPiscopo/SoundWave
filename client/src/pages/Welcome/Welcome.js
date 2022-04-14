@@ -1,4 +1,4 @@
-import "./Homepage.css";
+import "./Welcome.css";
 import styled from "styled-components";
 import pedalsBg from "../../assets/images/pedals-bg.jpg";
 // import logoWhite from "../../assets/images/logo-img-white.png";
@@ -14,8 +14,8 @@ const Homepage = () => {
           <div className="logo-text">SoundWave</div>
         </div>
         <p className="about">
-          Where fans can discover, connect
-          with, and directly support the artists they love.
+          Where fans can discover, connect with, and directly support the
+          artists they love.
         </p>
       </div>
     </PageWrapper>
