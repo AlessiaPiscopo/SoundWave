@@ -15,40 +15,42 @@
   
   html {
   
+    --color-almost-white: #f8f9fa;
     --color-almost-black: #181A1C;
     --color-cadet-grey: #8c9a9e;
     --color-silver-sand: #c4cbca;
     --color-light: #C8C3BC;
     --color-opal: #96bbbb;
+    --color-purple-grey: #7B7491;
   
   }
   
   /* Allow percentage-based heights in the application */
   html, body {
     height: 100%;
+    background-color: var(--color-almost-black)
   }
   
   /* Typographic tweaks!
     - Add accessible line-height
     - Improve text rendering */
   body {
-    line-height: 1.5;
+    /* line-height: 1.5; */
     -webkit-font-smoothing: antialiased;
     /* font-family: "Helvetica Neue", sans-serif; */
-    /* font-family: "Roboto Mono", Menlo, monospace; */
     font-family: Menlo, monospace;
-    font-size: 14px;
-    /* background-color: var(--color-silver-sand); */
-    background-color: var(--color-silver-sand);
-    color: var(--color-text-dark);
+    font-size: 13px;
     /* padding: 1rem; */
-  }
 
-  .App {
-    min-height: fit-content;
-    background-color: var(--color-almost-white);
-    /* padding: 15px; */
-    /* border: 2px solid green; */
+    /* LIGHT */
+    /* background-color: var(--color-almost-white); */
+    /* background-color: darkgrey;
+    color: var(--color-almost-black); */
+
+    /* DARK */
+    /* background-color: var(--color-almost-black); */
+    color: var(--color-almost-white);
+
   }
   
   /* Improve media defaults */
@@ -70,7 +72,7 @@
   /* Avoid text overflows */
   p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
-    font-size: 12px;
+    font-size: 13px;
   }
   
   /* Create a root stacking context */

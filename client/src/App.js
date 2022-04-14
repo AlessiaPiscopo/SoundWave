@@ -1,9 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import styled from "styled-components";
+import Homepage from "./pages/Homepage/Homepage";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 // import ArtistData from "./ArtistData";
-import NavBar from "./components/NavBar/NavBar";
+// import NavBar from "./components/NavBar/NavBar";
 
 // import Profile from "./pages/Profile";
 // import Artist from "./pages/Artist";
@@ -14,7 +15,7 @@ const App = () => {
     <>
       <div className="App">
         <BrowserRouter>
-          <NavBar />
+          {/* <NavBar /> */}
           {/* <ArtistData /> */}
           <Routes>
             <Route exact path="/" element={<Homepage />} />

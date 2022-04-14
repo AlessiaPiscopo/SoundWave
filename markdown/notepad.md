@@ -38,4 +38,3 @@ THE PLAN
 
 ## MISC
 
-- soundwave image attribution: Sound Waves by Alice Noir from NounProject.com

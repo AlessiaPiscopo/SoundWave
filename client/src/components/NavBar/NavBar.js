@@ -1,14 +1,16 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 // import SearchBar from "../SearchBar";
 // import { BsSun, BsMoonStars } from "react-icons/bs";
 import logo from "../../assets/images/logo.png";
+import logoWhite from "../../assets/images/logo-img-white.png";
 
 const NavBar = () => {
   return (
     <Wrapper>
       <StyledNavLink to="/">
         <Logo>
+          {/* <img src={logoWhite} height="50px" alt="sound wave" /> */}
           <img src={logo} height="50px" alt="sound wave" />
           SoundWave
         </Logo>
@@ -25,9 +27,11 @@ const NavBar = () => {
 const Wrapper = styled.div`
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
   min-height: fit-content;
-  background-color: var(--color-almost-white);
+  /* background-color: var(--color-almost-white); */
+  background-color: transparent;
   padding: 15px 30px 15px 15px;
 `;
 

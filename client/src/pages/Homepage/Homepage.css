@@ -1,0 +1,45 @@
+.page-wrapper {
+  position: relative;
+
+}
+
+.black-overlay {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.8;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    /* margin-top: -200px; */
+}
+
+.welcome-text {
+    color: var(--color-light);
+}
+
+.logo-container {
+    
+}
+
+.logo-img {
+}
+
+.logo-text {
+    font-size: 80px;
+    color: var(--color-opal);
+    font-family: Dokdo, Menlo, monospace;
+}
+
+.about {
+    display: flex;
+    color: var(--color-light);
+    width: 257px;
+    text-align: center;
+}
+
