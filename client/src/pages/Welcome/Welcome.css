@@ -20,7 +20,7 @@
 }
 
 .welcome-text {
-    color: var(--color-light);
+    color: var(--text-color);
 }
 
 .logo-container {

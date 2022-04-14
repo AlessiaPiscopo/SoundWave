@@ -2,8 +2,22 @@
 :root {
 
   /* text */
-  --text-color: #181A1C;
+
+  /* light */
+  /* --text-color: #181A1C;  */
+  /* dark */
+  --text-color: #c0c0c0; 
+
   --color-almost-black: #181A1C;
+
+  /* background */
+
+  /* light */
+  /* --bg-color: #c0c0c0; */
+  /* dark */
+  --bg-color: #181A1C; 
+
+  --color-light-grey: #c0c0c0;
 
   /* heading */
   --heading-color: #696d7d;
@@ -17,9 +31,6 @@
   --highlight-color: #ea9e8d;
   --color-peachy: #ea9e8d;
 
-  /* background */
-  --bg-color: #f4f4f4;
-  --color-very-light-grey: #f4f4f4;
 
   /* misc */
   --color-silver-sand: #c4cbca;
