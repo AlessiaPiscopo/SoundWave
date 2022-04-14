@@ -76,28 +76,28 @@ ul {
 
 /* forms */
 label {
-    display: block;
-    /* margin top & bottom */
-    margin: 24px auto;
-  }
+    /* display: block;
+    margin top & bottom
+    margin: 24px auto; */
+}
   
 label, span {
-  display: block; 
-  margin-bottom: 6px;
+  /* display: block; 
+  margin-bottom: 6px; */
 }
 
 input, textarea {
-  padding: 8px 6px;
+  /* padding: 8px 6px;
   font-size: 1em;
   color: var(--color-silver-sand);
   width: 100%;
   box-sizing: border-box;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 4px; */
 }
 
 textarea {
-  min-height: 160px;
+  /* min-height: 160px; */
 }
 
 .error {
