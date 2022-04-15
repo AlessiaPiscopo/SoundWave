@@ -9,7 +9,7 @@
 
 - ## Artist Profile Nav Bar
   
-  <nav className="artist-profile-nav-bar">
+  <nav className="navbar">
 
   - link text: 
     font-size: 14px;

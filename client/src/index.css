@@ -3,11 +3,8 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-/* base styles */
-
-/* colors */
-
 :root {
+  /* colors */
   --color-almost-black: #181A1C;
   --color-light-grey: #c0c0c0;
   --color-black-coral: #696d7d;
@@ -19,6 +16,7 @@
   --color-almost-white: #f8f9fa;
 }
 
+/* base styles */
 html {
   --text-color: #c0c0c0; 
   --bg-color: #181A1C; 
@@ -40,6 +38,7 @@ html {
 /* Allow percentage-based heights in the application */
 html, body {
   height: 100%;
+  color: var(--text-color);
   background-color: var(--bg-color)
 }
 
@@ -127,8 +126,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* buttons */
 .btn {
-  /* background: var(--highlight-color); */
   background-color: var(--color-opal);
+  font-weight: bold;
   padding: 4px 8px;
   border-radius: 4px;
   color: var(--color-almost-black);
@@ -148,13 +147,31 @@ p, h1, h2, h3, h4, h5, h6 {
   margin: 10px 0;
 }
 
+.nav-link {
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: line-through;
+}
+
+/* misc */
+.heading-stroke {
+  margin: auto;
+  padding-bottom: 15px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  -webkit-text-fill-color: var(--bg-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+}
+
 /* Create a root stacking context */
 #root, #__next {
   isolation: isolate;
 } 
-
-
-
 
 
 

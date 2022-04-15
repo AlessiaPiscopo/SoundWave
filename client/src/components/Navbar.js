@@ -17,10 +17,10 @@ const Navbar = () => {
 
         <div className="content-right">
           <li>
-            <Link to="/signup">sign up</Link>
+            <Link to="/artist/signup">sign up</Link>
           </li>
           <li>
-            <Link to="/login">log in</Link>
+            <Link to="/artist/login">log in</Link>
           </li>
           <button className="btn">log out</button>
         </div>

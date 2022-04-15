@@ -1,28 +1,29 @@
-// The Artist page defaults to the "music" tab in the menubar, which displays a grid of the artist's discography.
+// import { NavLink } from "react-router-dom";
 
-import ArtistMusic from "../components/Artist/ArtistMusic";
-import ArtistShows from "../components/Artist/ArtistShows";
+// styles & images
+import "./ArtistProfile.css";
+import AlvvaysBanner from "../../assets/alvvays/banner.png";
+// import AntisocialitesCover from "../../assets/alvvays/banner.png";
+
+
+// ArtistMusic, ArtistShows components
+
+// The Artist page defaults to the "music" tab in the menubar, which displays a grid of the artist's discography.
 
 const ArtistProfile = () => {
   return (
     <>
-      <div className="wrapper">
-        <div className="header">
-          <div className="banner"></div>
-          <div className="menu-bar">
-            <ArtistMusic />
-            <div className="artist-merch"></div>
-            <div className="artist-video"></div>
-            <ArtistShows />
-            <div className="artist-community"></div>
-          </div>
-        </div>
+      <div className="artist-profile">
+
+          <img className="banner-img" src={AlvvaysBanner} alt="" />
+          <nav className="menu">navbar</nav>
+
 
         <div className="right-column">
           {/* <ArtistBio /> */}
           <div className="profile-pic"></div>
-          <div className="artist">Boy Pablo</div>
-          <div className="location">Bergen, Norway</div>
+          <div className="artist">Alvvays</div>
+          <div className="location">Toronto, Ontario</div>
           <button>Follow</button>
           <div className="about-me-blurb"></div>
           <div className="socials"></div>
