@@ -1,15 +1,19 @@
+import { useAuthContext } from "../../hooks/useAuthContext";
+
 const ArtistDashboard = () => {
+  const { user } = useAuthContext();
+
   return (
     <div className="artist-dashboard">
       <header>
-        <h2>Welcome Artist! This is your dashboard.</h2>
+        <h2>Welcome {user.email}! This is your dashboard.</h2>
       </header>
 
       <div className="column-1">
         <div className="first-steps">
-          <p>First Step: </p>
-          <button>Add an album</button>
-          <button>or add a track</button>
+          {/* <p>First Step: </p> */}
+          <button className="btn">Add an album</button>
+          <button className="btn">or add a track</button>
         </div>
         <div className="activity">
           Once word gets out that you're here, this is where you'll see

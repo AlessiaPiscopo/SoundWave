@@ -8,8 +8,8 @@
   --color-almost-black: #181A1C;
   --color-light-grey: #c0c0c0;
   --color-black-coral: #696d7d;
-  --color-opal: #96bbbb;
-  --color-peachy: #ea9e8d;
+  --color-opal: #9cb9b9;
+  --color-peachy: #e2b0a4;
   
   /* misc */
   --color-silver-sand: #c4cbca;
@@ -21,7 +21,7 @@ html {
   --text-color: #c0c0c0; 
   --bg-color: #181A1C; 
   /* --text-color: #181A1C;  */
-  /* --bg-color: #c0c0c0; */
+  /* --bg-color: #c4cbca; */
   --heading-color: #696d7d;
   --primary-color: #96bbbb;
   --highlight-color: #ea9e8d;
@@ -126,7 +126,8 @@ p, h1, h2, h3, h4, h5, h6 {
 
 /* buttons */
 .btn {
-  background-color: var(--color-opal);
+  /* background: var(--color-peachy); */
+  background: var(--color-opal);
   font-weight: bold;
   padding: 4px 8px;
   border-radius: 4px;
