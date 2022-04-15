@@ -1,8 +1,6 @@
-import Container from "../components/StyledElements/Container";
-
 const ArtistDashboard = () => {
   return (
-    <Container>
+    <div className="artist-dashboard">
       <header>
         <h2>Welcome Artist! This is your dashboard.</h2>
       </header>
@@ -35,13 +33,8 @@ const ArtistDashboard = () => {
           here.
         </div>
       </div>
-    </Container>
+    </div>
   );
 };
 
 export default ArtistDashboard;
-
-/* <div className="band">
-  Get monthly updates on your sales and followers, plus tips for
-  making the most of Bandcamp. Click here to opt in.
-</div> */

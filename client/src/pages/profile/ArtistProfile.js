@@ -3,7 +3,7 @@
 import ArtistMusic from "../components/Artist/ArtistMusic";
 import ArtistShows from "../components/Artist/ArtistShows";
 
-const Artist = () => {
+const ArtistProfile = () => {
   return (
     <>
       <div className="wrapper">
@@ -30,7 +30,7 @@ const Artist = () => {
             {/* List of shows... first 2-3 dates... "more shows..." link to <ArtistShows /> */}
           </div>
           <div className="discography-preview">
-              {/* Same as shows? ... "more releases..." */}
+            {/* Same as shows? ... "more releases..." */}
           </div>
         </div>
       </div>
@@ -38,4 +38,4 @@ const Artist = () => {
   );
 };
 
-export default Artist;
+export default ArtistProfile;

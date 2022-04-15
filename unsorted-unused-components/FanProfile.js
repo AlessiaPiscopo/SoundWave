@@ -2,7 +2,7 @@ import Collection from "../components/Profile/Collection";
 import Wishlist from "../components/Profile/Wishlist";
 import Following from "../components/Profile/Following";
 
-const ProfilePage = () => {
+const FanProfile = () => {
   return (
     <>
       <header>My Profile</header>
@@ -26,4 +26,4 @@ const ProfilePage = () => {
   );
 };
 
-export default ProfilePage;
+export default FanProfile;

@@ -2,13 +2,10 @@
 // import styled from "styled-components";
 // import ArtistData from "../ArtistData";
 import { useState } from "react";
-import Container from "../StyledElements/Container";
-import {
-  createUserWithEmailAndPassword
-} from "firebase/auth";
-import { auth } from "../../firebase/firebase-config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../client/src/firebase/firebase-config";
 
-const ArtistSignup = () => {
+const ArtistSignupAndLogin = () => {
   const [registerEmail, setRegisterEmail] = useState("");
   const [registerPassword, setRegisterPassword] = useState("");
   const [loginEmail, setLoginEmail] = useState("");
@@ -35,7 +32,7 @@ const ArtistSignup = () => {
 
   return (
     <>
-      <Container>
+      <div>
         <h3>Sign Up As An Artist</h3>
         <div>
           {/* <input placeholder="Artist/Band Name" /> */}
@@ -75,17 +72,10 @@ const ArtistSignup = () => {
           {/* <NavLink to="/login">Log in here</NavLink>. */}
         </div>
 
-        <hr />
-
-        <h3>Welcome {user.email} </h3>
-      </Container>
+        <p>Welcome {user.email} </p>
+      </div>
     </>
   );
 };
 
-// const ArtistName = styled.input``;
-// const Username = styled.input``;
-// const Email = styled.input``;
-// const Password = styled.input``;
-
-export default ArtistSignup;
+export default ArtistSignupAndLogin;

@@ -1,11 +1,10 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 // pages & components
-// import Home from "./pages/home/Home";
-import Welcome from "./pages/welcome/Welcome";
 import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import Navbar from "./components/Navbar";
+import Home from "./pages/home/Home";
 
 const App = () => {
   return (
@@ -14,18 +13,14 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route exact path="/">
-            {/* <Home /> */}
+            <Home />
           </Route>
 
-          <Route exact path="/welcome">
-            <Welcome />
-          </Route>
-
-          <Route exact path="/signup">
+          <Route exact path="/artist/signup">
             <Signup />
           </Route>
 
-          <Route exact path="/login">
+          <Route exact path="/artist/login">
             <Login />
           </Route>
         </Switch>
