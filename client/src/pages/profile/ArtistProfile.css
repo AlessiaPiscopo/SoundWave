@@ -1,0 +1,9 @@
+.artist-profile {
+max-width: fit-content;
+}
+
+
+.artist-profile .menu {
+height: fit-content;
+/* set max width/height */
+}

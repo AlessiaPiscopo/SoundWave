@@ -1,0 +1,44 @@
+.login {
+    margin: auto;
+    min-width: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .form-container {
+    margin: auto;
+    width: 325px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login .title {
+    margin: auto;
+    padding-bottom: 25px;
+    font-size: 15px;
+}
+
+/* .login .form-container {
+    margin: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+} */
+
+/* .login label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+} */
+
+.login .btn {
+    margin-top: 5px;
+}
+
+.signup-instead {
+    margin: auto;
+    width: fit-content;
+    padding-top: 30px;
+    font-size: 13px;
+}

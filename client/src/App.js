@@ -1,31 +1,36 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import styled from "styled-components";
-import Homepage from "./pages/Homepage/Homepage";
-import Login from "./pages/Login";
-import Signup from "./pages/Signup";
-// import ArtistData from "./ArtistData";
-// import NavBar from "./components/NavBar/NavBar";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-// import Profile from "./pages/Profile";
-// import Artist from "./pages/Artist";
-// import ArtistDashboard from "./pages/ArtistDashboard";
+// pages & components
+import Navbar from "./components/Navbar";
+import Home from "./pages/home/Home";
+import Signup from "./pages/signup/Signup";
+import Login from "./pages/login/Login";
+import ArtistProfile from "./pages/profile/ArtistProfile";
 
 const App = () => {
   return (
-    <>
-      <div className="App">
-        <BrowserRouter>
-          {/* <NavBar /> */}
-          {/* <ArtistData /> */}
-          <Routes>
-            <Route exact path="/" element={<Homepage />} />
-            <Route exact path="/signup" element={<Signup />} />
-            <Route exact path="/login" element={<Login />} />
-            <Route exact path="/artist-dashboard" element={<Login />} />
-          </Routes>
-        </BrowserRouter>
-      </div>
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+
+          <Route exact path="/artist/signup">
+            <Signup />
+          </Route>
+
+          <Route exact path="/artist/login">
+            <Login />
+          </Route>
+
+          <Route exact path="/artist/profile">
+            <ArtistProfile />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    </div>
   );
 };
 

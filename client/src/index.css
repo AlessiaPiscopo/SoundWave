@@ -1,81 +1,184 @@
 /*
-  Josh's Custom CSS Reset
+  Adapted from Josh's Custom CSS Reset
   https://www.joshwcomeau.com/css/custom-css-reset/
 */
 
-/* Use a more-intuitive box-sizing model. */
+:root {
+  /* colors */
+  --color-almost-black: #181A1C;
+  --color-light-grey: #c0c0c0;
+  --color-black-coral: #696d7d;
+  --color-opal: #96bbbb;
+  --color-peachy: #ea9e8d;
+  
+  /* misc */
+  --color-silver-sand: #c4cbca;
+  --color-almost-white: #f8f9fa;
+}
+
+/* base styles */
+html {
+  --text-color: #c0c0c0; 
+  --bg-color: #181A1C; 
+  /* --text-color: #181A1C;  */
+  /* --bg-color: #c0c0c0; */
+  --heading-color: #696d7d;
+  --primary-color: #96bbbb;
+  --highlight-color: #ea9e8d;
+}
+
 *, *::before, *::after {
-    box-sizing: border-box;
-  }
-  
-  /* Remove default margin */
-  * {
-    margin: 0;
-  }
-  
-  html {
-  
-    --color-almost-white: #f8f9fa;
-    --color-almost-black: #181A1C;
-    --color-cadet-grey: #8c9a9e;
-    --color-silver-sand: #c4cbca;
-    --color-light: #C8C3BC;
-    --color-opal: #96bbbb;
-    --color-purple-grey: #7B7491;
-  
-  }
-  
-  /* Allow percentage-based heights in the application */
-  html, body {
-    height: 100%;
-    background-color: var(--color-almost-black)
-  }
-  
-  /* Typographic tweaks!
-    - Add accessible line-height
-    - Improve text rendering */
-  body {
-    /* line-height: 1.5; */
-    -webkit-font-smoothing: antialiased;
-    /* font-family: "Helvetica Neue", sans-serif; */
-    font-family: Menlo, monospace;
-    font-size: 13px;
-    /* padding: 1rem; */
+  box-sizing: border-box;
+}
 
-    /* LIGHT */
-    /* background-color: var(--color-almost-white); */
-    /* background-color: darkgrey;
-    color: var(--color-almost-black); */
+* {
+  margin: 0;
+}
 
-    /* DARK */
-    /* background-color: var(--color-almost-black); */
-    color: var(--color-almost-white);
+/* Allow percentage-based heights in the application */
+html, body {
+  height: 100%;
+  color: var(--text-color);
+  background-color: var(--bg-color)
+}
 
-  }
-  
-  /* Improve media defaults */
-  img, picture, video, canvas, svg {
-    display: block;
-    max-width: 100%;
-  }
-  
-  /* Remove built-in form typography styles */
-  input, button, textarea, select {
-    font: inherit;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Avoid text overflows */
-  p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
-    font-size: 13px;
-  }
-  
-  /* Create a root stacking context */
-  #root, #__next {
-    isolation: isolate;
-  } 
+/* Typographic tweaks!
+  - Add accessible line-height
+  - Improve text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  /* line-height: 1.5; */
+  /* padding: 1rem; */
+  font-family: Menlo, monospace;
+  font-size: 14px;
+  background-color: var(--bg-color)
+}
+
+/* Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+ul, li, p, h1, h2, h3, h4 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+/* forms */
+/* Remove built-in form typography styles */
+input, button, textarea, select {
+  font: inherit;
+}
+
+label {
+  /* display: block;
+  margin top & bottom
+  margin: 24px auto; */
+}
+
+label, span {
+/* display: block; 
+margin-bottom: 6px; */
+}
+
+input, textarea {
+/* padding: 8px 6px;
+font-size: 1em;
+color: var(--color-silver-sand);
+width: 100%;
+box-sizing: border-box;
+border: 1px solid #ddd;
+border-radius: 4px; */
+}
+
+textarea {
+/* min-height: 160px; */
+}
+
+/* Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+/* layout */
+.page-title {
+  font-size: 1em;
+  color: var(--heading-color);
+  display: inline-block;
+}
+
+/* buttons */
+.btn {
+  background-color: var(--color-opal);
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  color: var(--color-almost-black);
+  cursor: pointer;
+  border: 1px solid var(--color-black-coral);
+}
+.btn:hover {
+  text-decoration: line-through;
+}
+
+.error {
+  color: red;
+  background: pink;
+  border: 1px solid red;
+  border-radius: 4px;
+  padding: 8px;
+  margin: 10px 0;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: line-through;
+}
+
+/* misc */
+.heading-stroke {
+  margin: auto;
+  padding-bottom: 15px;
+  font-family: "Helvetica Neue", sans-serif;
+  font-size: 40px;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: var(--text-color);
+  -webkit-text-fill-color: var(--bg-color);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: var(--text-color);
+}
+
+/* Create a root stacking context */
+#root, #__next {
+  isolation: isolate;
+} 
+
+
+
+
+
+
+
+
+
+
