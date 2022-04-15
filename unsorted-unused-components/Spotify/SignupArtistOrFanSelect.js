@@ -4,7 +4,7 @@ import { useState } from "react";
 import ArtistSignup from "../components/SignUp/ArtistSignup";
 import FanSignup from "../components/SignUp/FanSignup";
 
-const SignupModal = () => {
+const SignupArtistOrFanSelect = () => {
   const [artistClicked, setArtistClicked] = useState(false);
   const [fanClicked, setFanClicked] = useState(false);
 
@@ -47,4 +47,4 @@ const SignupModal = () => {
   );
 };
 
-export default SignupModal;
+export default SignupArtistOrFanSelect;
