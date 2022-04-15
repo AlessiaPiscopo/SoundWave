@@ -78,7 +78,11 @@ const Signup = () => {
           </NavLink>
           .
         </p>
-        {error && <div>error</div>}
+        {error && (
+          <p style={{ color: "red", textAlign: "center" }}>
+            Error! Password must be at least 6 characters long.
+          </p>
+        )}
       </form>
     </div>
   );

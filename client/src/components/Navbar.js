@@ -1,8 +1,13 @@
 import { Link } from "react-router-dom";
+import { useLogout } from "../hooks/useLogout";
+
+// styles & images
 import "./Navbar.css";
 import SoundWaveWhite from "./../assets/images/logo-img-white.png";
 
 const Navbar = () => {
+  const { logout } = useLogout();
+
   return (
     <div>
       <ul className="navbar">
@@ -22,7 +27,9 @@ const Navbar = () => {
           <li>
             <Link to="/artist/login">log in</Link>
           </li>
-          <button className="btn">log out</button>
+          <button className="btn" onClick={logout}>
+            log out
+          </button>
         </div>
       </ul>
     </div>

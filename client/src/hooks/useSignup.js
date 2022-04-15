@@ -11,9 +11,10 @@ export const useSignup = () => {
     setError(null);
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredentials) => {
-        console.log("User signed up:", userCredentials.user);
+        console.log("User signed up!", userCredentials.user);
       })
       .catch((err) => {
+        console.log(err.message);
         setError(err.message);
       });
   };
