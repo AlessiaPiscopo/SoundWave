@@ -38,7 +38,7 @@
 
 .about {
     display: flex;
-    color: var(--color-light);
+    color: var(--text-color);
     width: 257px;
     text-align: center;
 }

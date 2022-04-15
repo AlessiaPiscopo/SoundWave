@@ -32,7 +32,7 @@ const PageWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin-top: -85px; */
+  margin-top: -85px;
 `;
 
 export default Homepage;

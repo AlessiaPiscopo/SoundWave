@@ -1,4 +1,4 @@
-import styles from "./Login.module.css";
+import "./Login.css";
 
 const Login = () => {
   return (
