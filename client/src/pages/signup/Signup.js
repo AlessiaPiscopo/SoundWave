@@ -22,7 +22,7 @@ const Signup = () => {
 
   return (
     <div className="signup">
-      <h2 className="title">welcome to SoundWave</h2>
+      <h2 className="title">Welcome to SoundWave</h2>
       <form className="form-container" onSubmit={handleSubmit}>
         {/* -------------------- */}
 
