@@ -1,15 +1,15 @@
-import TrackPlayer from "../TrackPlayer";
+import AudioPlayer from "../AudioPlayer";
 
 const AlbumDetails = () => {
   return (
     <>
       <div className="wrapper">
         <div className="left-column">
-          <div className="album-name">Soy Pablo</div>
-          <div className="artist">by Boy Pablo</div>
-          <TrackPlayer />
+          <div className="album-name">albumName</div>
+          <div className="artist">by artistName</div>
+          <AudioPlayer />
 
-          <div className="buy-album">
+          {/* <div className="buy-album">
             <div className="album-format">Digital Album</div>
             <div>
               Includes unlimited streaming via the free Bandcamp app, plus
@@ -18,7 +18,7 @@ const AlbumDetails = () => {
 
             <button>Buy Digital Album</button>
             <span className="price">$7 USD</span>
-          </div>
+          </div> */}
 
           <section className="track-list"></section>
 

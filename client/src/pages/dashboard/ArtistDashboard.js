@@ -3,19 +3,18 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 
 // components
 import UploadAlbumForm from "./UploadAlbumForm";
-import UploadTrackForm from "./UploadTrackForm";
 
 const ArtistDashboard = () => {
   const { user } = useAuthContext();
   const [addAlbumClicked, setAddAlbumClicked] = useState(false);
-  const [addTrackClicked, setAddTrackClicked] = useState(false);
+  //   const [addTrackClicked, setAddTrackClicked] = useState(false);
 
   const handleAlbumClicked = () => {
     setAddAlbumClicked(true);
   };
-  const handleTrackClicked = () => {
-    setAddTrackClicked(true);
-  };
+  //   const handleTrackClicked = () => {
+  //     setAddTrackClicked(true);
+  //   };
 
   return (
     <div className="artist-dashboard">
@@ -27,12 +26,11 @@ const ArtistDashboard = () => {
             Add an album
           </button>
 
-          <button onClick={handleTrackClicked} className="btn">
+          {/* <button onClick={handleTrackClicked} className="btn">
             or add a track
-          </button>
+          </button> */}
 
           {addAlbumClicked && <UploadAlbumForm />}
-          {addTrackClicked && <UploadTrackForm />}
         </div>
       </div>
     </div>

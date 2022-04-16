@@ -2,9 +2,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
-
-// Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
 // TODO: transfer to .env file
@@ -22,3 +20,4 @@ const app = initializeApp(firebaseConfig);
 // Pass app to getFirestore to populate db with all of the Firestore information from app
 export const db = getFirestore(app);
 export const auth = getAuth(app);
+export const storage = getStorage(app);

@@ -5,7 +5,6 @@ import "./ArtistProfile.css";
 import AlvvaysBanner from "../../assets/alvvays/banner.png";
 // import AntisocialitesCover from "../../assets/alvvays/banner.png";
 
-
 // ArtistMusic, ArtistShows components
 
 // The Artist page defaults to the "music" tab in the menubar, which displays a grid of the artist's discography.
@@ -14,11 +13,10 @@ const ArtistProfile = () => {
   return (
     <>
       <div className="artist-profile">
+        <img className="banner-img" src={AlvvaysBanner} alt="" />
+        <nav className="menu">navbar</nav>
 
-          <img className="banner-img" src={AlvvaysBanner} alt="" />
-          <nav className="menu">navbar</nav>
-
-
+        {/* SIDEBAR */}
         <div className="right-column">
           {/* <ArtistBio /> */}
           <div className="profile-pic"></div>

@@ -7,6 +7,7 @@ import Home from "./pages/home/Home";
 import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import ArtistDashboard from "./pages/dashboard/ArtistDashboard";
+import ArtistProfile from "./pages/profile/ArtistProfile";
 
 const App = () => {
   const { user, authIsReady } = useAuthContext();
@@ -27,13 +28,17 @@ const App = () => {
                 {!user && <Signup />}
               </Route>
 
-              <Route exact path="/login">
+              <Route path="/login">
                 {!user && <Login />}
                 {user && <Redirect to="/dashboard" />}
               </Route>
 
-              <Route exact path="/dashboard">
+              <Route path="/dashboard">
                 <ArtistDashboard />
+              </Route>
+
+              <Route path="/profile">
+                <ArtistProfile />
               </Route>
             </>
           )}
