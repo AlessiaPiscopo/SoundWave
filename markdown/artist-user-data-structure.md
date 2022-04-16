@@ -46,21 +46,20 @@
       <!-- image keeps its aspect ratio, but is resized to fit within the given dimension container -->
       object-fit: contain; 
     }
-      - width: 
 
 - ## Artist Name, Location, Follow/Unfollow Button
     - <span className="title">artistName</span> (bold text)
     - <span className="secondary-text">location</span>
-    - <button className="follow unfollow following">
+    - <button className="follow unfollow following"></button>
 
-- ## Official Website and Socials Links 
+- ## Official Website and Socials Links (# links, form to add links - stretch)
   - <a href="">officialWebsiteLink</a>
   - <a href="">facebookLink</a>
   - <a href="">twitterLink</a>
   - <a href="">youtubeLink</a>
   - <a href="">instagramLink</a>
   
-- ## Shows (Concerts)
+- ## Tour Dates (dummy data; (TourDatesForm - stretch)
   <div className=concertsList>
     <span className="title">shows</span>
     <div>
@@ -71,8 +70,11 @@
   </div>
 
 - ## Discography 
-  - album card (small)
-
+  - map through artistAlbums
+  - return: 
+    - albumCover (small)
+    - albumName
+    - artistName
 
 # Album Details 
 
@@ -83,9 +85,9 @@
   - albumTitle
   - by artist (loggedInArtist?)
   
-- ## Audio Player
+- ## Audio Player 
 
-- ## Album Format, Buy Link, Price, Send As Gift
+<!-- - ## Album Format, Buy Link, Price, Send As Gift -->
   
 - ## Track List 
   
@@ -101,7 +103,7 @@
 - **RIGHT COLUMN**
 
 - albumCover (large)
-- share/embed
+<!-- - share/embed -->
 - add to wishlist/in wishlist
   
 - supported by 
@@ -110,6 +112,6 @@
     - fanUserName
     - fanAlbumComment
       - favorite track: fanFavoriteTrack
-  - more... (link to more comments--show up below)
+  - <span>more...</span> (# link to more comments)
   - fan avatar grid
-    - more... (link to more fans--show up below)
+    - <span>more...</span> (# link to more fans)

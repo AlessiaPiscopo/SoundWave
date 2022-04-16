@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
+// components
+import SearchBar from "../components/SearchBar";
+
 // styles, images & icons
 import "./Navbar.css";
-
 import SoundWaveWhite from "./../assets/images/logo-img-white.png";
 import AccountIcon from "./../assets/icons/account.png";
-
 import BellIcon from "./../assets/icons/bell.png";
 import MagnifyIcon from "./../assets/icons/magnify.png";
 
@@ -33,6 +34,7 @@ const Navbar = () => {
 
         <div className="links-right">
           {/* if user, hide link, display bell, avatar icons, and logout btn */}
+          <SearchBar />
           <img src={MagnifyIcon} alt="magnify icon" className="icons" />
           <img src={BellIcon} alt="bell icon" className="icons" />
           <Link to="/dashboard">
