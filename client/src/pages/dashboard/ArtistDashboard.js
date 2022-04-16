@@ -1,40 +1,38 @@
+import { useState } from "react";
 import { useAuthContext } from "../../hooks/useAuthContext";
+
+// components
+import UploadAlbumForm from "./UploadAlbumForm";
+import UploadTrackForm from "./UploadTrackForm";
 
 const ArtistDashboard = () => {
   const { user } = useAuthContext();
+  const [addAlbumClicked, setAddAlbumClicked] = useState(false);
+  const [addTrackClicked, setAddTrackClicked] = useState(false);
+
+  const handleAlbumClicked = () => {
+    setAddAlbumClicked(true);
+  };
+  const handleTrackClicked = () => {
+    setAddTrackClicked(true);
+  };
 
   return (
     <div className="artist-dashboard">
-      <header>
-        <h2>Welcome {user.email}! This is your dashboard.</h2>
-      </header>
+      <h2>Welcome {user.email}! This is your dashboard.</h2>
 
       <div className="column-1">
-        <div className="first-steps">
-          {/* <p>First Step: </p> */}
-          <button className="btn">Add an album</button>
-          <button className="btn">or add a track</button>
-        </div>
-        <div className="activity">
-          Once word gets out that you're here, this is where you'll see
-          notifications of sales and followers. To make that happen, go read our
-          Artist Guide.
-        </div>
-      </div>
+        <div className="add-album-or-track">
+          <button onClick={handleAlbumClicked} className="btn">
+            Add an album
+          </button>
 
-      <div className="column-2">
-        <div className="followers">
-          No followers, but just you wait! This is where you'll see your
-          followers. We notify them when you release new music or merch, so the
-          more followers you have, the more sales you can expect.
-        </div>
-        <div className="plays">
-          The site of your future plays Add your music and we'll start showing
-          your plays here.
-        </div>
-        <div className="sales">
-          Cha-ching! Add your music and merch and we'll start showing your sales
-          here.
+          <button onClick={handleTrackClicked} className="btn">
+            or add a track
+          </button>
+
+          {addAlbumClicked && <UploadAlbumForm />}
+          {addTrackClicked && <UploadTrackForm />}
         </div>
       </div>
     </div>

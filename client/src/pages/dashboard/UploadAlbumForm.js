@@ -1,4 +1,4 @@
-import "./AlbumForm.css";
+import "./UploadAlbumForm.css";
 
 const UploadAlbumForm = () => {
   const handleSubmit = () => {};
@@ -6,7 +6,10 @@ const UploadAlbumForm = () => {
   return (
     <div className="upload-album-form">
       <form onClick={handleSubmit}>
-        <ul></ul>
+        <ul>
+          <span>upload album</span>
+          <li></li>
+        </ul>
       </form>
     </div>
   );
