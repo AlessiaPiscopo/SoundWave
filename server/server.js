@@ -19,9 +19,9 @@ app.use(helmet());
 app.use(cors());
 
 // Routes
+app.use("/api/categories/", require("./routes/categoriesRoutes"));
 
-// get all genres
-app.use("/api/genres/", require("./routes/genreRoutes"));
+
 
 app.listen(8005, () => console.log(`🍉 Listening on Port ${8005}...`));
 

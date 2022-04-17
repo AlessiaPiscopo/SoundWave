@@ -3,12 +3,13 @@
 const express = require("express");
 const router = express.Router();
 const {
-  getGenres,
-  // getSpotifyAuth,
-} = require("../controllers/genreControllers");
+  getCategories,
+  getCategory,
+} = require("../controllers/categoriesControllers");
 // const { getArtists } = require("../controllers/artistControllers");
 
-router.route("/").get(getGenres);
+router.route("/").get(getCategories);
+router.route("/:categoryId").get(getCategory);
 
 // router.route("/").get(getArtists);
 // router.route("/:id").get(getOneArtist);
