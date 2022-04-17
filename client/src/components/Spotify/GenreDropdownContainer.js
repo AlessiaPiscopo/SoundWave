@@ -10,38 +10,31 @@ import axios from "axios";
 const GenreDropdownContainer = () => {
   const spotify = Credentials();
 
-  // console.log("RENDERING APP.JS");
-
   const [token, setToken] = useState("");
   const [genres, setGenres] = useState({
     selectedGenre: "",
     listOfGenresFromAPI: [],
   });
-  const [playlist, setPlaylist] = useState({
-    selectedPlaylist: "",
-    listOfPlaylistFromAPI: [],
-  });
-  const [tracks, setTracks] = useState({
-    selectedTrack: "",
-    listOfTracksFromAPI: [],
-  });
-  const [trackDetail, setTrackDetail] = useState(null);
 
   useEffect(() => {
+    // fetch AUTHORIZATION TOKEN--put this in a custom hook, useAuth, since we need to call this endpoint before calling any other endpoint!
     axios("https://accounts.spotify.com/api/token", {
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
-        Authorization:
-          "Basic " + btoa(spotify.ClientId + ":" + spotify.ClientSecret),
+        Authorization: `Basic ${btoa(
+          spotify.ClientId + ":" + spotify.ClientSecret
+        )}`,
+        // used interpolation instead of: "Basic " + btoa(spotify.ClientId + ":" + spotify.ClientSecret),
       },
       data: "grant_type=client_credentials",
       method: "POST",
     }).then((tokenResponse) => {
       setToken(tokenResponse.data.access_token);
 
-      axios("https://api.spotify.com/v1/browse/categories?locale=sv_US", {
+      // fetch GENRES (i.e. categories)
+      axios("https://api.spotify.com/v1/browse/categories", {
         method: "GET",
-        headers: { Authorization: "Bearer " + tokenResponse.data.access_token },
+        headers: { Authorization: `Bearer ${tokenResponse.data.access_token}` },
       }).then((genreResponse) => {
         setGenres({
           selectedGenre: genres.selectedGenre,
@@ -49,6 +42,7 @@ const GenreDropdownContainer = () => {
         });
       });
     });
+    // the useEffect's dependency array will also always need the spotify.ClientId and spotify.ClientSecret
   }, [genres.selectedGenre, spotify.ClientId, spotify.ClientSecret]);
 
   const genreChanged = (val) => {

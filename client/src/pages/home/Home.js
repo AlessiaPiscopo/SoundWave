@@ -1,7 +1,10 @@
+// components
+import ExploreByGenre from "../../components/ExploreByGenre";
+
+// styles & images
 import "./Home.css";
 import styled from "styled-components";
 import pedalsBg from "../../assets/images/pedals-bg.jpg";
-// import logoWhite from "../../assets/images/logo-img-white.png";
 
 const Homepage = () => {
   return (
@@ -17,6 +20,7 @@ const Homepage = () => {
           Where fans can discover, connect with, and directly support the
           artists they love.
         </p>
+        <ExploreByGenre />
       </div>
     </PageWrapper>
   );

@@ -1,4 +1,4 @@
-const AlbumCard = () => {
+const FanCollectionItem = () => {
   return (
     <>
       <header>album card</header>
@@ -7,12 +7,12 @@ const AlbumCard = () => {
         <div className="album-name"></div>
         <div className="artist"></div>
 
-        {/* TrackSelect component? */}
+        {/* <TrackSelect /> */}
         <div className="favourite-track">
           <div className="select-track"></div>
         </div>
 
-        {/* CommentBox component */}
+        {/* <CommentBox />  */}
         <section className="comment-box">
           <label>Why do you love this album?</label>
           <div className="textarea"></div>
@@ -25,4 +25,4 @@ const AlbumCard = () => {
   );
 };
 
-export default AlbumCard;
+export default FanCollectionItem;

@@ -1,0 +1,2 @@
+- search for artist 
+  - get artists 

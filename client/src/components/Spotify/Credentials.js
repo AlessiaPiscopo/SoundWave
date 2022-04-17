@@ -1,4 +1,4 @@
-// move to .env
+// move to .env - DONE
 
 const Credentials = () => {
   return {

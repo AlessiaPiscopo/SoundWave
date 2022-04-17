@@ -1,9 +1,26 @@
-# Spotify API - Alvvays
+# Spotify API
 
-  - Alvvays: 3kzwYV3OCB010YfXMF0Avt
-  - TOPS: 2SdK1QDmZIP2hk94rSaLl9
+- search for artist 
+  - get /v1/artists
+
+
+
+## STEPS
+
+- move to backend 
+    - helper function/handler for auth token fetch
+      - call this from each handler where its needed
+- convert to async 
+- spotifyRoutes
+- fetch data from fe
+  - store in state 
+  - artist, setArtist 
 
 ## Endpoints 
+
+- some artist IDs: 
+  - Alvvays: 3kzwYV3OCB010YfXMF0Avt
+  - TOPS: 2SdK1QDmZIP2hk94rSaLl9
 
 ### GET Artist - /v1/artists/{id}
 
@@ -49,3 +66,5 @@
   "type": "artist",
   "uri": "spotify:artist:3kzwYV3OCB010YfXMF0Avt"
 }
+
+### GET Artists - /v1/artists?ids=id1,id2,...

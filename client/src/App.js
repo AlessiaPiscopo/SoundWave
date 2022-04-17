@@ -40,6 +40,8 @@ const App = () => {
               <Route path="/profile">
                 <ArtistProfile />
               </Route>
+
+              <Route path="/genres/:id">{/* <ArtistsByGenre */}</Route>
             </>
           )}
         </Switch>
