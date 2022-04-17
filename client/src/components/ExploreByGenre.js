@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
 
 const ExploreByGenre = () => {
   const [selectedGenre, setSelectedGenre] = useState("");
+  // const [genreClicked, setGenreClicked] = useState(false);
 
   const handleClick = (ev) => {
     setSelectedGenre(ev.target.value);
@@ -14,13 +14,10 @@ const ExploreByGenre = () => {
       <p>Explore by Genre</p>
       <ul>
         <li>
-          <NavLink to="/genre/" onClick={handleClick}>pop</NavLink>
+          <span onClick={handleClick}>pop</span>
         </li>
         <li>
-          <span>punk</span>
-        </li>
-        <li>
-          <span>hip hop</span>
+          <span>rnb</span>
         </li>
       </ul>
     </div>

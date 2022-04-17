@@ -6,7 +6,6 @@ const dotenv = require("dotenv").config();
 const morgan = require("morgan");
 const cors = require("cors");
 const helmet = require("helmet");
-// const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
 
@@ -19,11 +18,8 @@ app.use(helmet());
 app.use(cors());
 
 // Routes
-app.use("/api/categories/", require("./routes/categoriesRoutes"));
-
-
+app.use("/api/categories/", require("./routes/categoryRoutes"));
+app.use("/api/artists/", require("./routes/artistRoutes"));
 
 app.listen(8005, () => console.log(`🍉 Listening on Port ${8005}...`));
 
-// get all artists (id1, id2, ... ) up to 50 max
-// app.use("/api/artists", require("./routes/spotifyRoutes"));

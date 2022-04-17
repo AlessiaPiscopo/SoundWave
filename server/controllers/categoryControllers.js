@@ -11,11 +11,7 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: client_secret,
 });
 
-// Some test artist Ids:
-//  - Alvvays: 3kzwYV3OCB010YfXMF0Avt
-//  - TOPS: 2SdK1QDmZIP2hk94rSaLl9
-
-const getArtists = (req, res) => {
+const getCategories = (req, res) => {
   spotifyApi
     // get access token
     .clientCredentialsGrant()
@@ -24,19 +20,19 @@ const getArtists = (req, res) => {
       console.log("The access token expires in " + result.body["expires_in"]);
       spotifyApi.setAccessToken(result.body["access_token"]);
 
-      // get artists
-      return spotifyApi.getArtists([
-        "3kzwYV3OCB010YfXMF0Avt",
-        "2SdK1QDmZIP2hk94rSaLl9",
-      ]);
+      // get categories
+      return spotifyApi.getCategories({
+        country: "US",
+        locale: "en_US",
+      });
     })
     .then((data) => {
       res.status(200).json({
         status: 200,
-        message: "Get Artists - Success",
-        data: data,
+        message: "Get Categories - Success",
+        data: data.body.categories.items,
       });
-      console.log(data);
+      console.log(data.body.categories.items);
       return;
     })
     .catch((err) => {
@@ -45,7 +41,7 @@ const getArtists = (req, res) => {
     });
 };
 
-const getArtist = (req, res) => {
+const getCategory = (req, res) => {
   spotifyApi
     // get access token
     .clientCredentialsGrant()
@@ -54,14 +50,14 @@ const getArtist = (req, res) => {
       console.log("The access token expires in " + result.body["expires_in"]);
       spotifyApi.setAccessToken(result.body["access_token"]);
 
-      // get artist
-      const artistId = req.params.artistId;
-      return spotifyApi.getArtist(artistId);
+      // get category
+      const categoryId = req.params.categoryId;
+      return spotifyApi.getCategory(categoryId);
     })
     .then((data) => {
       res.status(200).json({
         status: 200,
-        message: "Get Artist - Success",
+        message: "Get Category - Success",
         data: data,
       });
       console.log(data.body);
@@ -73,4 +69,4 @@ const getArtist = (req, res) => {
     });
 };
 
-module.exports = { getArtists, getArtist };
+module.exports = { getCategories, getCategory };
