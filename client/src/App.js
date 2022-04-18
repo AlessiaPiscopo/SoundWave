@@ -8,7 +8,7 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import ArtistDashboard from "./pages/dashboard/ArtistDashboard";
 import ArtistProfile from "./pages/profile/ArtistProfile";
-import ExploreByCategory from "./components/ExploreByCategory";
+import GenreDetails from "./pages/genre-details/GenreDetails";
 
 const App = () => {
   const { user, authIsReady } = useAuthContext();
@@ -22,18 +22,20 @@ const App = () => {
             <Home />
           </Route>
 
+          <Route path="/genres/:genre">
+            <GenreDetails />
+          </Route>
+
           {authIsReady && (
             <>
               {user && <Redirect to="/login" />}
               <Route exact path="/signup">
-                {/* <Signup /> */}
                 {!user && <Signup />}
               </Route>
 
               <Route path="/login">
-                {/* <Login /> */}
                 {!user && <Login />}
-                {user && <Redirect to="/dashboard" />}
+                {/* {user && <Redirect to="/dashboard" />} */}
               </Route>
 
               <Route path="/dashboard">

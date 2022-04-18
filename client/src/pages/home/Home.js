@@ -1,12 +1,11 @@
 // components
-import ExploreByGenre from "../../components/ExploreByCategory";
-// import ExploreByArtist from "../../components/ExploreByArtist";
+// import SearchByGenre from "../../components/SearchByGenre";
+import GenreDropdown from "../../components/GenreDropdown";
 
 // styles & images
 import "./Home.css";
 import styled from "styled-components";
 import pedalsBg from "../../assets/images/pedals-bg.jpg";
-import SearchBar from "../../components/SearchBar";
 
 const Homepage = () => {
   return (
@@ -24,7 +23,8 @@ const Homepage = () => {
         </p>
         {/* <ExploreByGenre /> */}
         {/* <ExploreByArtist /> */}
-        <SearchBar />
+        {/* <SearchByGenre /> */}
+        <GenreDropdown />
       </div>
     </PageWrapper>
   );

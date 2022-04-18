@@ -1,10 +1,9 @@
 import { useState } from "react";
-import "./SearchBar.css";
+import "./SearchByGenre.css";
 
 // SEARCH BY GENRE
-const SearchBar = () => {
+const SearchByGenre = () => {
   const [error, setError] = useState(false);
-  // const [searchTerm, setSearchTerm] = useState("");
   const [searchResults, setSearchResults] = useState([]);
   const [genre, setGenre] = useState("");
 
@@ -46,26 +45,13 @@ const SearchBar = () => {
           return (
             <div key={result} className="result-item">
               <div className="artist-name">{result.name}</div>
-              <div className="genres-list">{result["genres"]}</div>
+              {/* <div className="genres-list">{result["genres"]}</div> */}
             </div>
           );
         })}
       </div>
     </div>
-
-    // BROWSE BY GENRE (DROPDOWN)
-    // <div className="genre-dropdown">
-
-    // </div>
   );
 };
 
-export default SearchBar;
-
-/* <datalist id="genres">
-  <option value="pop" />
-  <option value="rock" />
-  <option value="punk" />
-  <option value="electronic" />
-  <option value="ambient" />
-</datalist>; */
+export default SearchByGenre;
