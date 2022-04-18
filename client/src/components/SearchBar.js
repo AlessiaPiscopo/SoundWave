@@ -28,6 +28,7 @@ const SearchBar = () => {
   };
 
   return (
+    // SEARCH BY GENRE
     <div className="search-bar">
       <div className="search-input">
         <form onSubmit={handleSubmit}>
@@ -43,7 +44,7 @@ const SearchBar = () => {
       <div className="search-results">
         {searchResults.map((result) => {
           return (
-            <div className="result-item">
+            <div key={result} className="result-item">
               <div className="artist-name">{result.name}</div>
               <div className="genres-list">{result["genres"]}</div>
             </div>
@@ -51,6 +52,11 @@ const SearchBar = () => {
         })}
       </div>
     </div>
+
+    // BROWSE BY GENRE (DROPDOWN)
+    // <div className="genre-dropdown">
+
+    // </div>
   );
 };
 
