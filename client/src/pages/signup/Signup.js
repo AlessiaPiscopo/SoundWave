@@ -73,7 +73,7 @@ const Signup = () => {
         <button className="btn">sign up</button>
         <p className="login-instead">
           Already have an account? Log in{" "}
-          <NavLink to="/artist/login" className="nav-link">
+          <NavLink to="/login" className="nav-link">
             here
           </NavLink>
           .

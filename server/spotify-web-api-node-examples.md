@@ -87,6 +87,7 @@ spotifyApi.getCategories({
   });
 
 ## Get a Category (in Sweden)
+
 spotifyApi.getCategory('party', {
       country: 'SE',
       locale: 'sv_SE'
@@ -95,4 +96,40 @@ spotifyApi.getCategory('party', {
     console.log(data.body);
   }, function(err) {
     console.log("Something went wrong!", err);
+  });
+
+# ----------------------------
+
+# SEARCH
+
+## Search tracks whose name, album or artist contains 'Love'
+spotifyApi.searchTracks('Love')
+  .then(function(data) {
+    console.log('Search by "Love"', data.body);
+  }, function(err) {
+    console.error(err);
+  });
+
+## Search artists whose name contains 'Love'
+spotifyApi.searchArtists('Love')
+  .then(function(data) {
+    console.log('Search artists by "Love"', data.body);
+  }, function(err) {
+    console.error(err);
+  });
+
+## Search tracks whose artist's name contains 'Love'
+spotifyApi.searchTracks('artist:Love')
+  .then(function(data) {
+    console.log('Search tracks by "Love" in the artist name', data.body);
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+
+## Search tracks whose artist's name contains 'Kendrick Lamar', and track name contains 'Alright'
+spotifyApi.searchTracks('track:Alright artist:Kendrick Lamar')
+  .then(function(data) {
+    console.log('Search tracks by "Alright" in the track name and "Kendrick Lamar" in the artist name', data.body);
+  }, function(err) {
+    console.log('Something went wrong!', err);
   });

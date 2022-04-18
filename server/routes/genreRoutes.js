@@ -6,9 +6,10 @@ const router = express.Router();
 const {
   getCategories,
   getCategory,
-} = require("../controllers/categoryControllers");
+  searchByGenre,
+} = require("../controllers/genreControllers");
 
 router.route("/").get(getCategories);
-router.route("/:categoryId").get(getCategory);
+router.route("/:genre").get(searchByGenre);
 
 module.exports = router;

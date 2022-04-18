@@ -7,7 +7,7 @@ const SearchBar = () => {
   const handleChange = (ev) => {
     setSearchTerm(ev.target.value);
 
-    // fetch genre endpoint
+
 
     console.log(ev.target.value);
   };

@@ -18,7 +18,7 @@ app.use(helmet());
 app.use(cors());
 
 // Routes
-app.use("/api/categories/", require("./routes/categoryRoutes"));
+app.use("/api/genres/", require("./routes/genreRoutes"));
 app.use("/api/artists/", require("./routes/artistRoutes"));
 app.use("/api/albums/", require("./routes/albumRoutes"));
 

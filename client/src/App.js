@@ -24,16 +24,16 @@ const App = () => {
 
           {authIsReady && (
             <>
-              {/* {user && <Redirect to="/login" />} */}
+              {user && <Redirect to="/login" />}
               <Route exact path="/signup">
-                <Signup />
-                {/* {!user && <Signup />} */}
+                {/* <Signup /> */}
+                {!user && <Signup />}
               </Route>
 
               <Route path="/login">
-                <Login />
-                {/* {!user && <Login />} */}
-                {/* {user && <Redirect to="/dashboard" />} */}
+                {/* <Login /> */}
+                {!user && <Login />}
+                {user && <Redirect to="/dashboard" />}
               </Route>
 
               <Route path="/dashboard">

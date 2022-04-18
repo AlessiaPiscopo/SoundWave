@@ -20,21 +20,16 @@ const getCategories = (req, res) => {
       console.log("The access token expires in " + result.body["expires_in"]);
       spotifyApi.setAccessToken(result.body["access_token"]);
 
-      // get categories
-      return spotifyApi.getCategories({
-        limit: 50,
-        offset: 0,
-        country: "US",
-        locale: "en_US",
-      });
+      // get GENRES!!!
+      return spotifyApi.getAvailableGenreSeeds();
     })
     .then((data) => {
       res.status(200).json({
         status: 200,
-        message: "Get Categories - Success",
-        data: data.body.categories.items,
+        message: "Get Genres - Success",
+        data: data,
       });
-      console.log(data.body.categories.items);
+      console.log(data);
       return;
     })
     .catch((err) => {
@@ -77,7 +72,8 @@ const getCategory = (req, res) => {
     });
 };
 
-const getNewReleasesByCategory = (req, res) => {
+// TODO: rename to searchArtistsByGenre, move to artist controllers
+const searchByGenre = (req, res) => {
   spotifyApi
     // get access token
     .clientCredentialsGrant()
@@ -86,24 +82,26 @@ const getNewReleasesByCategory = (req, res) => {
       console.log("The access token expires in " + result.body["expires_in"]);
       spotifyApi.setAccessToken(result.body["access_token"]);
 
-      // get category
-      const categoryId = req.params.categoryId;
-      return spotifyApi.getCategory(categoryId);
+      // SEARCH ARTISTS BY GENRE
+      return spotifyApi.searchArtists(`genre:${req.params.genre}`);
+      // return spotifyApi.
     })
-
     .then((data) => {
       res.status(200).json({
         status: 200,
-        message: "Get Category - Success",
+        message: "Search by Genre - Success",
         data: data,
       });
       console.log(data.body);
       return;
     })
     .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
       console.log("Something went wrong...");
       console.log(err);
     });
 };
 
-module.exports = { getCategories, getCategory };
+module.exports = { getCategories, getCategory, searchByGenre };

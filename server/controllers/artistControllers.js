@@ -11,11 +11,13 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: client_secret,
 });
 
+spotifyApi.searchArtists
 // Some test artist Ids:
 //  - Alvvays: 3kzwYV3OCB010YfXMF0Avt
 //  - TOPS: 2SdK1QDmZIP2hk94rSaLl9
 
-const getArtists = (req, res) => {
+// get multiple artists by id
+const getArtistsById = (req, res) => {
   spotifyApi
     // get access token
     .clientCredentialsGrant()
@@ -48,7 +50,8 @@ const getArtists = (req, res) => {
     });
 };
 
-const getArtist = (req, res) => {
+// get single artist by id
+const getArtistById = (req, res) => {
   spotifyApi
     // get access token
     .clientCredentialsGrant()
@@ -79,4 +82,10 @@ const getArtist = (req, res) => {
     });
 };
 
-module.exports = { getArtists, getArtist };
+// search for an artist given a user-input search term
+const getArtistFromSearch = () => {};
+
+
+
+
+module.exports = { getArtistsById, getArtistById };

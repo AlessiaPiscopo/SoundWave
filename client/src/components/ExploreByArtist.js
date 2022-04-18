@@ -1,9 +1,10 @@
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 
 const ExploreByArtist = () => {
   const [error, setError] = useState(false);
   const [artist, setArtist] = useState(null);
+  const { artistId } = useParams();
 
   const handleClick = (artistId) => {
     fetch(`/api/artists/${artistId}`)

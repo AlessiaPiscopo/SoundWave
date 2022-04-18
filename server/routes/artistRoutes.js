@@ -3,9 +3,12 @@
 const express = require("express");
 const router = express.Router();
 
-const { getArtists, getArtist } = require("../controllers/artistControllers");
+const {
+  getArtistsById,
+  getArtistById,
+} = require("../controllers/artistControllers");
 
-router.route("/").get(getArtists);
-router.route("/:artistId").get(getArtist);
+router.route("/").get(getArtistsById);
+router.route("/:artistId").get(getArtistById);
 
 module.exports = router;
