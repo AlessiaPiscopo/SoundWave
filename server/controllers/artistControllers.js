@@ -11,10 +11,42 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: client_secret,
 });
 
-spotifyApi.searchArtists
+spotifyApi.searchArtists;
 // Some test artist Ids:
 //  - Alvvays: 3kzwYV3OCB010YfXMF0Avt
 //  - TOPS: 2SdK1QDmZIP2hk94rSaLl9
+
+// get single artist by id
+const getArtistById = (req, res) => {
+  spotifyApi
+    // get access token
+    .clientCredentialsGrant()
+    .then((result) => {
+      console.log("Your access token is: " + result.body.access_token);
+      console.log("The access token expires in " + result.body["expires_in"]);
+      spotifyApi.setAccessToken(result.body["access_token"]);
+
+      // get artist
+      const artistId = req.params.artistId;
+      return spotifyApi.getArtist(artistId);
+    })
+    .then((data) => {
+      res.status(200).json({
+        status: 200,
+        message: "Get Artist - Success",
+        data: data,
+      });
+      console.log(data.body);
+      return;
+    })
+    .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
+      console.log("Something went wrong...");
+      console.log(err);
+    });
+};
 
 // get multiple artists by id
 const getArtistsById = (req, res) => {
@@ -49,43 +81,5 @@ const getArtistsById = (req, res) => {
       console.log(err);
     });
 };
-
-// get single artist by id
-const getArtistById = (req, res) => {
-  spotifyApi
-    // get access token
-    .clientCredentialsGrant()
-    .then((result) => {
-      console.log("Your access token is: " + result.body.access_token);
-      console.log("The access token expires in " + result.body["expires_in"]);
-      spotifyApi.setAccessToken(result.body["access_token"]);
-
-      // get artist
-      const artistId = req.params.artistId;
-      return spotifyApi.getArtist(artistId);
-    })
-    .then((data) => {
-      res.status(200).json({
-        status: 200,
-        message: "Get Artist - Success",
-        data: data,
-      });
-      console.log(data.body);
-      return;
-    })
-    .catch((err) => {
-      res.status(400).json({
-        error: err,
-      });
-      console.log("Something went wrong...");
-      console.log(err);
-    });
-};
-
-// search for an artist given a user-input search term
-const getArtistFromSearch = () => {};
-
-
-
 
 module.exports = { getArtistsById, getArtistById };

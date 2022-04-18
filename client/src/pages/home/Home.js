@@ -1,6 +1,7 @@
 // components
 // import SearchByGenre from "../../components/SearchByGenre";
 import GenreDropdown from "../../components/GenreDropdown";
+import ExploreByArtist from "../../components/ExploreByArtist";
 
 // styles & images
 import "./Home.css";
@@ -25,6 +26,7 @@ const Homepage = () => {
         {/* <ExploreByArtist /> */}
         {/* <SearchByGenre /> */}
         <GenreDropdown />
+        <ExploreByArtist />
       </div>
     </PageWrapper>
   );

@@ -40,6 +40,10 @@
   gap: 1rem;
 }
 
+.navbar .btn {
+  background-color: var(--color-opal);
+}
+
 .navbar .logout-link {
   font-weight: bold;
 }

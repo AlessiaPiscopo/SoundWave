@@ -6,6 +6,7 @@ import "./GenreDetails.css";
 const GenreDetails = () => {
   const [error, setError] = useState(false);
   const [artistsByGenre, setArtistsByGenre] = useState([]);
+  const [artistId, setArtistId] = useState(null);
   const { genre } = useParams();
 
   useEffect(() => {
@@ -30,6 +31,7 @@ const GenreDetails = () => {
           return (
             <div key={`${artist}${index}`} className="artist-card">
               <div className="artist-name">{artist.name}</div>
+              <img src={artist.images["url"]} alt="" />
             </div>
           );
         })}

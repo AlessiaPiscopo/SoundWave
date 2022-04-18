@@ -18,28 +18,29 @@ const App = () => {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-
-          <Route path="/genres/:genre">
-            <GenreDetails />
-          </Route>
-
           {authIsReady && (
             <>
-              {user && <Redirect to="/login" />}
+              <Route exact path="/">
+                <Home />
+              </Route>
+
+              <Route path="/genres/:genre">
+                <GenreDetails />
+              </Route>
+
               <Route exact path="/signup">
+                {user && <Redirect to="/login" />}
                 {!user && <Signup />}
               </Route>
 
               <Route path="/login">
                 {!user && <Login />}
-                {/* {user && <Redirect to="/dashboard" />} */}
+                {user && <Redirect to="/dashboard" />}
               </Route>
 
               <Route path="/dashboard">
-                <ArtistDashboard />
+                {user && <ArtistDashboard />}
+                {!user && <Redirect to="/" />}
               </Route>
 
               <Route path="/artists/:artistId">

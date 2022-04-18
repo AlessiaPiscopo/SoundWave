@@ -2,9 +2,6 @@ import { Link } from "react-router-dom";
 import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
-// components
-// import SearchBar from "../components/SearchBar";
-
 // styles, images & icons
 import "./Navbar.css";
 import SoundWaveWhite from "./../assets/images/logo-img-white.png";
@@ -33,14 +30,19 @@ const Navbar = () => {
         </li>
 
         <div className="links-right">
-          {/* if user, hide link, display bell, avatar icons, and logout btn */}
-          {/* <SearchBar /> */}
           <img src={MagnifyIcon} alt="magnify icon" className="icons" />
-          <img src={BellIcon} alt="bell icon" className="icons" />
-          <Link to="/dashboard">
-            <img src={AccountIcon} alt="account icon" className="icons" />
-          </Link>
-          {!user && (
+          {user ? (
+            <>
+              <img src={BellIcon} alt="bell icon" className="icons" />
+              <Link to="/dashboard">
+                <img src={AccountIcon} alt="account icon" className="icons" />
+              </Link>
+              <div>Hey, {user.email}</div>
+              <button className="logout-link btn" onClick={logout}>
+                log out
+              </button>
+            </>
+          ) : (
             <>
               <li className="artist-signup-link">
                 <Link to="/signup">sign up</Link>
@@ -51,15 +53,6 @@ const Navbar = () => {
                 </button>
               </li>
             </>
-          )}
-
-          {user && (
-            // <button className="btn" onClick={logout}>
-            //   log out
-            // </button>
-            <span className="logout-link" onClick={logout}>
-              log out
-            </span>
           )}
         </div>
       </ul>
