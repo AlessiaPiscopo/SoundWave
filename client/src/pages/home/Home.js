@@ -1,5 +1,5 @@
 // components
-import ExploreByGenre from "../../components/ExploreByGenre";
+import ExploreByGenre from "../../components/ExploreByCategory";
 
 // styles & images
 import "./Home.css";

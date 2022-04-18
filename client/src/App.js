@@ -8,6 +8,7 @@ import Signup from "./pages/signup/Signup";
 import Login from "./pages/login/Login";
 import ArtistDashboard from "./pages/dashboard/ArtistDashboard";
 import ArtistProfile from "./pages/profile/ArtistProfile";
+import ExploreByCategory from "./components/ExploreByCategory";
 
 const App = () => {
   const { user, authIsReady } = useAuthContext();
@@ -23,14 +24,16 @@ const App = () => {
 
           {authIsReady && (
             <>
-              {user && <Redirect to="/login" />}
+              {/* {user && <Redirect to="/login" />} */}
               <Route exact path="/signup">
-                {!user && <Signup />}
+                <Signup />
+                {/* {!user && <Signup />} */}
               </Route>
 
               <Route path="/login">
-                {!user && <Login />}
-                {user && <Redirect to="/dashboard" />}
+                <Login />
+                {/* {!user && <Login />} */}
+                {/* {user && <Redirect to="/dashboard" />} */}
               </Route>
 
               <Route path="/dashboard">
@@ -40,10 +43,12 @@ const App = () => {
               <Route path="/profile">
                 <ArtistProfile />
               </Route>
-
-              <Route path="/genres/:id">{/* <ArtistsByGenre */}</Route>
             </>
           )}
+
+          <Route path="/categories/:categoryId">
+            <div>hello</div>
+          </Route>
         </Switch>
       </BrowserRouter>
     </div>

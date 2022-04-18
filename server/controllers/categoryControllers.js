@@ -22,6 +22,8 @@ const getCategories = (req, res) => {
 
       // get categories
       return spotifyApi.getCategories({
+        limit: 50,
+        offset: 0,
         country: "US",
         locale: "en_US",
       });
@@ -36,6 +38,9 @@ const getCategories = (req, res) => {
       return;
     })
     .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
       console.log("Something went wrong...");
       console.log(err);
     });
@@ -54,6 +59,38 @@ const getCategory = (req, res) => {
       const categoryId = req.params.categoryId;
       return spotifyApi.getCategory(categoryId);
     })
+    .then((data) => {
+      res.status(200).json({
+        status: 200,
+        message: "Get Category - Success",
+        data: data,
+      });
+      console.log(data.body);
+      return;
+    })
+    .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
+      console.log("Something went wrong...");
+      console.log(err);
+    });
+};
+
+const getNewReleasesByCategory = (req, res) => {
+  spotifyApi
+    // get access token
+    .clientCredentialsGrant()
+    .then((result) => {
+      console.log("Your access token is: " + result.body.access_token);
+      console.log("The access token expires in " + result.body["expires_in"]);
+      spotifyApi.setAccessToken(result.body["access_token"]);
+
+      // get category
+      const categoryId = req.params.categoryId;
+      return spotifyApi.getCategory(categoryId);
+    })
+
     .then((data) => {
       res.status(200).json({
         status: 200,

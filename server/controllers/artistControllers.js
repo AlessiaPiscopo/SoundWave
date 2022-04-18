@@ -40,6 +40,9 @@ const getArtists = (req, res) => {
       return;
     })
     .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
       console.log("Something went wrong...");
       console.log(err);
     });
@@ -68,6 +71,9 @@ const getArtist = (req, res) => {
       return;
     })
     .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
       console.log("Something went wrong...");
       console.log(err);
     });

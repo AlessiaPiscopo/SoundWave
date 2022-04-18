@@ -1,6 +1,5 @@
 // Logic for GenreDropdown
 
-import React, { useState, useEffect } from "react";
 import GenreDropdown from "./GenreDropdown";
 import Listbox from "./Listbox";
 import Detail from "./Detail";
@@ -8,28 +7,13 @@ import { Credentials } from "./Credentials";
 import axios from "axios";
 
 const GenreDropdownContainer = () => {
-  const spotify = Credentials();
 
-  const [token, setToken] = useState("");
   const [genres, setGenres] = useState({
     selectedGenre: "",
     listOfGenresFromAPI: [],
   });
 
   useEffect(() => {
-    // fetch AUTHORIZATION TOKEN--put this in a custom hook, useAuth, since we need to call this endpoint before calling any other endpoint!
-    axios("https://accounts.spotify.com/api/token", {
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        Authorization: `Basic ${btoa(
-          spotify.ClientId + ":" + spotify.ClientSecret
-        )}`,
-        // used interpolation instead of: "Basic " + btoa(spotify.ClientId + ":" + spotify.ClientSecret),
-      },
-      data: "grant_type=client_credentials",
-      method: "POST",
-    }).then((tokenResponse) => {
-      setToken(tokenResponse.data.access_token);
 
       // fetch GENRES (i.e. categories)
       axios("https://api.spotify.com/v1/browse/categories", {
@@ -111,12 +95,12 @@ const GenreDropdownContainer = () => {
           selectedValue={genres.selectedGenre}
           changed={genreChanged}
         />
-        <GenreDropdown
+        {/* <GenreDropdown
           label="Playlist :"
           options={playlist.listOfPlaylistFromAPI}
           selectedValue={playlist.selectedPlaylist}
           changed={playlistChanged}
-        />
+        /> */}
         <div className="col-sm-6 row form-group px-0">
           <button type="submit" className="btn btn-success col-sm-12">
             Search
