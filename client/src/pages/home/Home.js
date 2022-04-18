@@ -1,11 +1,12 @@
 // components
 import ExploreByGenre from "../../components/ExploreByCategory";
-import ExploreByArtist from "../../components/ExploreByArtist";
+// import ExploreByArtist from "../../components/ExploreByArtist";
 
 // styles & images
 import "./Home.css";
 import styled from "styled-components";
 import pedalsBg from "../../assets/images/pedals-bg.jpg";
+import SearchBar from "../../components/SearchBar";
 
 const Homepage = () => {
   return (
@@ -21,8 +22,9 @@ const Homepage = () => {
           Where fans can discover, connect with, and directly support the
           artists they love.
         </p>
-        <ExploreByGenre />
-        <ExploreByArtist />
+        {/* <ExploreByGenre /> */}
+        {/* <ExploreByArtist /> */}
+        <SearchBar />
       </div>
     </PageWrapper>
   );

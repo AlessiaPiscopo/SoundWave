@@ -21,5 +21,6 @@ app.use(cors());
 app.use("/api/genres/", require("./routes/genreRoutes"));
 app.use("/api/artists/", require("./routes/artistRoutes"));
 app.use("/api/albums/", require("./routes/albumRoutes"));
+app.use("/api/search/", require("./routes/searchRoutes"));
 
 app.listen(8005, () => console.log(`🍉 Listening on Port ${8005}...`));

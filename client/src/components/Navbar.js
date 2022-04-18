@@ -3,7 +3,7 @@ import { useLogout } from "../hooks/useLogout";
 import { useAuthContext } from "../hooks/useAuthContext";
 
 // components
-import SearchBar from "../components/SearchBar";
+// import SearchBar from "../components/SearchBar";
 
 // styles, images & icons
 import "./Navbar.css";
@@ -34,7 +34,7 @@ const Navbar = () => {
 
         <div className="links-right">
           {/* if user, hide link, display bell, avatar icons, and logout btn */}
-          <SearchBar />
+          {/* <SearchBar /> */}
           <img src={MagnifyIcon} alt="magnify icon" className="icons" />
           <img src={BellIcon} alt="bell icon" className="icons" />
           <Link to="/dashboard">
