@@ -1,5 +1,6 @@
 // components
 import ExploreByGenre from "../../components/ExploreByCategory";
+import ExploreByArtist from "../../components/ExploreByArtist";
 
 // styles & images
 import "./Home.css";
@@ -21,6 +22,7 @@ const Homepage = () => {
           artists they love.
         </p>
         <ExploreByGenre />
+        <ExploreByArtist />
       </div>
     </PageWrapper>
   );

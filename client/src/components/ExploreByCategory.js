@@ -1,8 +1,7 @@
-import { useState, useEffect } from "react";
-import { useParams, NavLink, useHistory } from "react-router-dom";
+import { useState } from "react";
+// import { NavLink } from "react-router-dom";
 
 const ExploreByCategory = () => {
-  // const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [category, setCategory] = useState(null);
 
@@ -22,24 +21,15 @@ const ExploreByCategory = () => {
   return (
     <div className="explore-by-category">
       <p>Explore by Category</p>
-      <div>
-        {/* <NavLink onClick={() => handleClick("rnb")} to={"/categories/rnb"}>
-          RnB
-        </NavLink> */}
-        <button onClick={() => handleClick("rnb")}>RnB</button>
+      <button onClick={() => handleClick("rnb")}>RnB</button>
+      <button onClick={() => handleClick("rock")}>rock</button>
 
-        {category && (
-          <div className="category-grid">
-            <div>{category.body.name}</div>
-            <img src={category.body.icons[0].url} alt="" />
-          </div>
-        )}
-
-        {/* <NavLink to={`/categories/${categoryId}`}>pop</NavLink>
-            <NavLink to={`/categories/${categoryId}`}>rock</NavLink>
-            <NavLink to={`/categories/${categoryId}`}>punk</NavLink>
-            <NavLink to={`/categories/${categoryId}`}>indie</NavLink> */}
-      </div>
+      {category && (
+        <div className="category-grid">
+          <div>{category.body.name}</div>
+          <img src={category.body.icons[0].url} alt="" />
+        </div>
+      )}
     </div>
   );
 };

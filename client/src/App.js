@@ -40,15 +40,11 @@ const App = () => {
                 <ArtistDashboard />
               </Route>
 
-              <Route path="/profile">
+              <Route path="/artists/:artistId">
                 <ArtistProfile />
               </Route>
             </>
           )}
-
-          <Route path="/categories/:categoryId">
-            <div>hello</div>
-          </Route>
         </Switch>
       </BrowserRouter>
     </div>

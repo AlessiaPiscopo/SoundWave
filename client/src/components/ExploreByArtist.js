@@ -1,26 +1,37 @@
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const ExploreByArtist = () => {
-  const [selectedArtist, setSelectedArtist] = useState("");
-  // const [artistClicked, setArtistClicked] = useState(false);
+  const [error, setError] = useState(false);
+  const [artist, setArtist] = useState(null);
 
-  const handleClick = (ev) => {
-    setSelectedArtist(ev.target.value);
-    console.log(ev.target.value);
+  const handleClick = (artistId) => {
+    fetch(`/api/artists/${artistId}`)
+      .then((res) => res.json())
+      .then(({ data }) => {
+        setArtist(data);
+        console.log(data);
+      })
+      .catch((err) => {
+        setError(error);
+        console.log(err);
+      });
   };
 
   return (
-    <div className="explore-by-genre">
-      <p>Explore by Genre</p>
-      <ul>
-        <li>
-          <span onClick={handleClick}>Alvvays</span>
-        </li>
-        <li>
-          <span>TOPS</span>
-        </li>
-      </ul>
+    <div className="explore-by-artist">
+      <p>Explore by Artist</p>
+      {/* <button onClick={() => handleClick("rock")}>Whitney</button> */}
+      <NavLink to={`/artists/${artistId}`} onClick={handleClick}>
+        Whitney
+      </NavLink>
+
+      {artist && (
+        <div className="artist-grid">
+          <div>{artist.body.name}</div>
+          <img src={artist.body.icons[0].url} alt="" />
+        </div>
+      )}
     </div>
   );
 };
