@@ -82,4 +82,9 @@ const getArtistsById = (req, res) => {
     });
 };
 
+// get an artist's albums
+const getArtistAlbums = (req, res) => {
+  
+}
+
 module.exports = { getArtistsById, getArtistById };

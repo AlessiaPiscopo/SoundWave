@@ -31,7 +31,12 @@ const GenreDetails = () => {
           return (
             <div key={`${artist}${index}`} className="artist-card">
               <div className="artist-name">{artist.name}</div>
-              <img src={artist.images["url"]} alt="" />
+              <img
+                height="150px"
+                width="150px"
+                src={artist.images[0].url}
+                alt=""
+              />
             </div>
           );
         })}
