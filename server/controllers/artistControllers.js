@@ -34,7 +34,7 @@ const getArtistById = (req, res) => {
       res.status(200).json({
         status: 200,
         message: "Get Artist - Success",
-        data: data,
+        data: data.body,
       });
       console.log(data.body);
       return;
@@ -84,7 +84,37 @@ const getArtistsById = (req, res) => {
 
 // get an artist's albums
 const getArtistAlbums = (req, res) => {
-  
-}
+  spotifyApi
+    // get access token
+    .clientCredentialsGrant()
+    .then((result) => {
+      console.log("Your access token is: " + result.body.access_token);
+      console.log("The access token expires in " + result.body["expires_in"]);
+      spotifyApi.setAccessToken(result.body["access_token"]);
 
-module.exports = { getArtistsById, getArtistById };
+      // get artist
+      const artistId = req.params.artistId;
+      return spotifyApi.getArtistAlbums(artistId, {
+        album_type: "album",
+        country: "US",
+      });
+    })
+    .then((data) => {
+      res.status(200).json({
+        status: 200,
+        message: "Get Artist's Albums - Success",
+        data: data.body.items,
+      });
+      console.log(data.body.items);
+      return;
+    })
+    .catch((err) => {
+      res.status(400).json({
+        error: err,
+      });
+      console.log("Something went wrong...");
+      console.log(err);
+    });
+};
+
+module.exports = { getArtistsById, getArtistById, getArtistAlbums };

@@ -1,15 +1,30 @@
+import { useState } from "react";
 import "./UploadAlbumForm.css";
+import { db } from "../../firebase/firebase-config";
+import { collection, addDoc } from "firebase/firestore";
 
 const UploadAlbumForm = () => {
-  const handleSubmit = () => {};
+  const [newAlbum, setNewAlbum] = useState("");
+
+  const handleSubmit = async (ev) => {
+    ev.preventDefault();
+
+    await addDoc(collection(db, "albums"), { title: newAlbum });
+
+    // clear form input field
+    setNewAlbum("");
+  };
 
   return (
     <div className="upload-album-form">
-      <form onClick={handleSubmit}>
-        <ul>
-          <span>upload album</span>
-          <li></li>
-        </ul>
+      <form onSubmit={handleSubmit}>
+        <span>add album title:</span>
+        <input
+          type="text"
+          required
+          onChange={(ev) => setNewAlbum(ev.target.value)}
+          value={newAlbum}
+        />
       </form>
     </div>
   );

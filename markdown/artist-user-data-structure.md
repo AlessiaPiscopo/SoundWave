@@ -42,10 +42,6 @@
 
 - ## Profile Picture
     - <img className="sidebar-profile-picture" src="" alt="">
-    .sidebar-profile-picture {
-      <!-- image keeps its aspect ratio, but is resized to fit within the given dimension container -->
-      object-fit: contain; 
-    }
 
 - ## Artist Name, Location, Follow/Unfollow Button
     - <span className="title">artistName</span> (bold text)

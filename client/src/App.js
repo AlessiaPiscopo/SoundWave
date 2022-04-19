@@ -1,5 +1,6 @@
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import { useAuthContext } from "./hooks/useAuthContext";
+import styled from "styled-components";
 
 // pages & components
 import Navbar from "./components/Navbar";
@@ -17,38 +18,38 @@ const App = () => {
     <div className="App">
       <BrowserRouter>
         <Navbar />
-        <Switch>
-          {authIsReady && (
-            <>
-              <Route exact path="/">
-                <Home />
-              </Route>
+          <Switch>
+            {authIsReady && (
+              <>
+                <Route exact path="/">
+                  <Home />
+                </Route>
 
-              <Route path="/genres/:genre">
-                <GenreDetails />
-              </Route>
+                <Route path="/genres/:genre">
+                  <GenreDetails />
+                </Route>
 
-              <Route exact path="/signup">
-                {user && <Redirect to="/login" />}
-                {!user && <Signup />}
-              </Route>
+                <Route exact path="/signup">
+                  {user && <Redirect to="/login" />}
+                  {!user && <Signup />}
+                </Route>
 
-              <Route path="/login">
-                {!user && <Login />}
-                {user && <Redirect to="/dashboard" />}
-              </Route>
+                <Route path="/login">
+                  {!user && <Login />}
+                  {user && <Redirect to="/dashboard" />}
+                </Route>
 
-              <Route path="/dashboard">
-                {user && <ArtistDashboard />}
-                {!user && <Redirect to="/" />}
-              </Route>
+                <Route path="/dashboard">
+                  {user && <ArtistDashboard />}
+                  {!user && <Redirect to="/" />}
+                </Route>
 
-              <Route path="/artists/:artistId">
-                <ArtistProfile />
-              </Route>
-            </>
-          )}
-        </Switch>
+                <Route path="/artists/:artistId">
+                  <ArtistProfile />
+                </Route>
+              </>
+            )}
+          </Switch>
       </BrowserRouter>
     </div>
   );

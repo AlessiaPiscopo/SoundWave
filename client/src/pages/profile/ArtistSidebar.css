@@ -1,0 +1,16 @@
+.sidebar-content {
+    width: 200px;
+    border: 1px solid pink;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sidebar .profile-pic {
+    width: 200px;
+    height: 200px;
+}
+
+.sidebar .artist-name {
+    font-weight: bold;
+}

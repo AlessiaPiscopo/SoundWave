@@ -9,17 +9,6 @@ const AlbumDetails = () => {
           <div className="artist">by artistName</div>
           <AudioPlayer />
 
-          {/* <div className="buy-album">
-            <div className="album-format">Digital Album</div>
-            <div>
-              Includes unlimited streaming via the free Bandcamp app, plus
-              high-quality download in MP3, FLAC and more.
-            </div>
-
-            <button>Buy Digital Album</button>
-            <span className="price">$7 USD</span>
-          </div> */}
-
           <section className="track-list"></section>
 
           <div className="release-date"></div>
