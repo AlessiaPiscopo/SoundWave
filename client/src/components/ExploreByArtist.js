@@ -1,9 +1,8 @@
-// for GETTING documents
-import { useCollection } from "../hooks/useCollection";
+import { useRealtimeListener } from "../hooks/useRealtimeListener";
 import { Link } from "react-router-dom";
 
 const ExploreByArtist = () => {
-  const { documents: artists } = useCollection("artists");
+  const { documents: artists } = useRealtimeListener("artists");
 
   return (
     <>

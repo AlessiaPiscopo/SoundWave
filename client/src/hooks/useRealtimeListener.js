@@ -1,18 +1,17 @@
-// a custom hook to set up realtime data with our database!
-
 import { useState, useEffect } from "react";
 
 // firebase
 import { db } from "../firebase/firebase-config";
-import { collection, onSnapshot, getDocs } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 
-export const useCollection = (coll) => {
+// set up realtime listener to see live updates when data changes
+export const useRealtimeListener = (coll) => {
   const [documents, setDocuments] = useState(null);
 
   useEffect(() => {
     let ref = collection(db, coll);
 
-    // set up realtime listener and unsubscribe when component unmounts
+    // unsubscribe when component unmounts
     const unsub = onSnapshot(ref, (snapshot) => {
       let results = [];
       snapshot.docs.forEach((doc) => {

@@ -45,7 +45,6 @@ const SearchByGenre = () => {
           return (
             <div key={result} className="result-item">
               <div className="artist-name">{result.name}</div>
-              {/* <div className="genres-list">{result["genres"]}</div> */}
             </div>
           );
         })}

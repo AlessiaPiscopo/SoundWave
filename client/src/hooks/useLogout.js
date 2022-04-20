@@ -4,7 +4,6 @@ import { useAuthContext } from "./useAuthContext";
 import { auth } from "../firebase/firebase-config";
 import { signOut } from "firebase/auth";
 
-// the signOut function from firebase auth logs out the current user
 export const useLogout = () => {
   const { dispatch } = useAuthContext();
 

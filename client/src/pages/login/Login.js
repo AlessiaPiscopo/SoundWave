@@ -11,8 +11,6 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  // TODO: pass down artistName and artistUsername from context
-
   const handleSubmit = (ev) => {
     ev.preventDefault();
     login(email, password);

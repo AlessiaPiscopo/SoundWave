@@ -10,9 +10,7 @@ const Signup = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
   const [artistName, setArtistName] = useState("");
-  // const [artistUsername, setArtistUsername] = useState("");
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -35,18 +33,6 @@ const Signup = () => {
           }}
           value={artistName}
         />
-
-        {/* -------------------- */}
-
-        {/* <input
-          required
-          type="text"
-          placeholder="username"
-          onChange={(ev) => {
-            setArtistUsername(ev.target.value);
-          }}
-          value={artistUsername}
-        /> */}
 
         {/* -------------------- */}
 

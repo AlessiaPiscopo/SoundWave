@@ -1,7 +1,7 @@
 // components
 // import SearchByGenre from "../../components/SearchByGenre";
 import GenreDropdown from "../../components/GenreDropdown";
-import ExploreByArtist from "../../components/ExploreByArtist";
+// import ExploreByArtist from "../../components/ExploreByArtist";
 
 // styles & images
 import "./Home.css";
@@ -15,18 +15,18 @@ const Homepage = () => {
       <div className="welcome-container">
         <p className="welcome-text">Welcome to</p>
         <div className="logo-container">
-          {/* <img className="logo-img" src={logoWhite} alt="logo-img" /> */}
           <div className="logo-text">SoundWave</div>
         </div>
         <p className="about">
-          Where fans can discover, connect with, and directly support the
-          artists they love.
+          An online record store and music community where passionate fans
+          discover, connect with, and directly support the artists they love.
         </p>
+        <div className="learn-more">Discover</div>
         {/* <ExploreByGenre /> */}
         {/* <ExploreByArtist /> */}
         {/* <SearchByGenre /> */}
         <GenreDropdown />
-        <ExploreByArtist />
+        {/* <ExploreByArtist /> */}
       </div>
     </PageWrapper>
   );
