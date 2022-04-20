@@ -1,0 +1,16 @@
+.discover {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    /* margin: 0 30px 0 30px; */
+    padding-top: 20px;
+}
+
+.discover .heading {
+    margin: auto;
+    font-size: 40px;
+    color: var(--color-opal);
+    font-family: Dokdo, Menlo, monospace;
+    position: sticky;
+    bottom: 0;
+}

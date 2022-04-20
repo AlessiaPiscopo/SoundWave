@@ -49,7 +49,7 @@ const ArtistProfile = () => {
           </header>
 
           <div className="cols">
-            <ArtistDiscography />
+            <ArtistDiscography artist={artist} />
             <ArtistSidebar artist={artist} />
           </div>
         </div>

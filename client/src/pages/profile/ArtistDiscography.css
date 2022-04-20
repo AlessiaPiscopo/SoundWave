@@ -1,7 +1,23 @@
 .artist-discography {
-    /* border: 2px solid green; */
+    border: 2px solid green;
     display: flex;
     width: 100%;
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.artist-discography .content-container {
+    border: 2px solid blue;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.artist-discography .dashboard {
+    
 }

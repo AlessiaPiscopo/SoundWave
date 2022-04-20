@@ -16,16 +16,18 @@ const GenreDropdown = () => {
 
   return (
     <div className="genre-dropdown">
-      <p>choose a genre</p>
-      <select onChange={handleChange}>
-        {allGenres.map((genre) => {
-          return (
-            <option name="genre" value={genre} key={genre}>
-              {genre}
-            </option>
-          );
-        })}
-      </select>
+      <div className="content-container">
+        <h1 className="title">Explore Artists By Genre</h1>
+        <select className="select" onChange={handleChange}>
+          {allGenres.map((genre) => {
+            return (
+              <option name="genre" value={genre} key={genre}>
+                {genre}
+              </option>
+            );
+          })}
+        </select>
+      </div>
     </div>
   );
 };

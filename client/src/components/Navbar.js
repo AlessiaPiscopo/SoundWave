@@ -34,7 +34,7 @@ const Navbar = () => {
           {user ? (
             <>
               <img src={BellIcon} alt="bell icon" className="icons" />
-              <Link to="/dashboard">
+              <Link to="/artists/:artistId">
                 <img src={AccountIcon} alt="account icon" className="icons" />
               </Link>
               <div>Hey, {user.email}</div>

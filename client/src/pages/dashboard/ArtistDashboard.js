@@ -23,6 +23,8 @@ const ArtistDashboard = () => {
 
   return (
     <div className="artist-dashboard">
+        <h1>My Dashboard</h1>
+
       <h2>Welcome {user.email}! This is your dashboard.</h2>
 
       <div className="column-1">

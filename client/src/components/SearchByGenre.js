@@ -29,6 +29,7 @@ const SearchByGenre = () => {
   return (
     // SEARCH BY GENRE
     <div className="search-bar">
+      <h1 className="title">Search</h1>
       <div className="search-input">
         <form onSubmit={handleSubmit}>
           <input

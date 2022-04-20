@@ -1,7 +1,25 @@
+.search-bar {
+    /* margin-left: 30px;
+    margin-right: 30px; */
+    margin: 0 30px 30px 30px;
+    width: 250px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 30px; */
+}
+
 .search-bar .result-item {
     padding: 10px;
 }
 
 .search-bar .genres-list {
     padding: 5px;
+}
+
+.search-bar .title {
+    padding-bottom: 20px;
+    font-size: 18px;
 }

@@ -1,6 +1,5 @@
 .page-wrapper {
-  position: relative;
-
+    position: relative;
 }
 
 .black-overlay {
@@ -46,11 +45,5 @@
     margin-top: 5px;
 }
 
-.learn-more {
-    font-size: 30px;
-    color: var(--color-opal);
-    font-family: Dokdo, Menlo, monospace;
-    position: sticky;
-    bottom: 0;
-}
+
 

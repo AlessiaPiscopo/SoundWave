@@ -4,7 +4,12 @@ import { useParams } from "react-router-dom";
 // styles
 import "./ArtistDiscography.css";
 
-const ArtistDiscography = () => {
+// components
+import ArtistDashboard from "../dashboard/ArtistDashboard";
+// import UploadAlbumCover from "../dashboard/UploadAlbumCover";
+// import UploadAlbumForm from "../dashboard/UploadAlbumForm";
+
+const ArtistDiscography = ({ artist }) => {
   const [error, setError] = useState(false);
   const [artistAlbums, setArtistAlbums] = useState([]);
   const { artistId } = useParams();
@@ -23,22 +28,29 @@ const ArtistDiscography = () => {
   }, [artistId]);
 
   return (
-    <div className="artist-discography">
-      {artistAlbums.map((album) => {
-        return (
-          <div className="album-card">
-            <img
-              className="album-cover"
-              height="200px"
-              width="200px"
-              src={album.images[0].url}
-              alt=""
-            />
-            <div className="album-name">{album.name}</div>
+    <>
+      <div className="artist-discography">
+        <div className="content-container">
+          {artistAlbums.map((album) => {
+            return (
+              <div className="album-card">
+                <img
+                  className="album-cover"
+                  height="200px"
+                  width="200px"
+                  src={album.images[0].url}
+                  alt=""
+                />
+                <h1 className="album-name">{album.name}</h1>
+              </div>
+            );
+          })}
+          <div className="dashboard">
+            <h1>My Dashboard</h1>
           </div>
-        );
-      })}
-    </div>
+        </div>
+      </div>
+    </>
   );
 };
 

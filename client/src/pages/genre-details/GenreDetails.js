@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
+// styles
 import "./GenreDetails.css";
 
 const GenreDetails = () => {
@@ -24,19 +25,18 @@ const GenreDetails = () => {
 
   return (
     <div className="genre-details">
-      <p>Browse Artists in {genre}</p>
-
+      <h1 className="title">{genre}</h1>
       <div className="artists-grid">
         {artistsByGenre.map((artist, index) => {
           return (
             <div key={`${artist}${index}`} className="artist-card">
-              <div className="artist-name">{artist.name}</div>
               <img
-                height="150px"
-                width="150px"
+                height="250px"
+                width="250px"
                 src={artist.images[0].url}
                 alt=""
               />
+              <div className="artist-name">{artist.name}</div>
             </div>
           );
         })}

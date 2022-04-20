@@ -14,7 +14,8 @@
     font-weight: bold;
     color: var(--color-almost-black);
     background-color: var(--color-opal);
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+    /* width: 100vw; */
 }
 
 .artist-profile .cols {

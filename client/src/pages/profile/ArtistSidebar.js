@@ -1,9 +1,12 @@
 import { NavLink } from "react-router-dom";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 // styles
 import "./ArtistSidebar.css";
 
 const ArtistSidebar = ({ artist }) => {
+  const { user } = useAuthContext();
+
   return (
     <div className="sidebar">
       <div className="sidebar-content">
@@ -11,16 +14,17 @@ const ArtistSidebar = ({ artist }) => {
         <div className="profile-pic">
           <img src={artist.images[0].url} alt="" />
         </div>
-        <div className="artist-name">{artist.name}</div>
-        <div className="location">SomeCity, AB</div>
-        <button>Follow</button>
+        <h1 className="artist-name">{artist.name}</h1>
+        {/* <div className="location">SomeCity, AB</div> */}
+
+        {/* {user ? <div>My Profile</div> : <button>Follow</button>} */}
+
         <div className="about-me-blurb">
-          This is our bio blah blah dadada cool
+          Hello this is a little bio section here's some info about me and my
+          music.
         </div>
         <div className="socials">
-          <ul>
-            <li></li>
-          </ul>
+          <ul></ul>
         </div>
         <div className="artist-shows-preview">
           {/* List of shows... first 2-3 dates... "more shows..." link to <ArtistShows /> */}
@@ -29,18 +33,13 @@ const ArtistSidebar = ({ artist }) => {
           {/* Same as shows? ... "more releases..." */}
         </div>
       </div>
-      <nav className="links">
+      {/* <nav className="links">
         <ul>
-          {/* artist && */}
           <li>
-            <NavLink to="/artist-dashboard"> </NavLink>
-          </li>
-          {/* fan && */}
-          <li>
-            <NavLink to="/fan-dashboard"> </NavLink>
+            <NavLink to="/dashboard">My Dashboard</NavLink>
           </li>
         </ul>
-      </nav>
+      </nav> */}
     </div>
   );
 };

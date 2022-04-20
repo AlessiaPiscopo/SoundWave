@@ -1,0 +1,36 @@
+.genre-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.genre-details .title {
+    margin: auto;
+    font-size: 50px;
+    color: var(--color-opal);
+    font-family: Dokdo, Menlo, monospace;
+    padding-bottom: 30px;
+}
+
+.genre-details .artists-grid {
+    display: flex;
+    /* width: 80vw; */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.genre-details .artist-card {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.genre-details .artist-name {
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+
+    /* color: var(--color-almost-black); */
+}

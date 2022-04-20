@@ -48,7 +48,7 @@ const Login = () => {
 
       <p className="signup-instead">
         Don't have an account yet? Create one{" "}
-        <NavLink to="/artist/signup" className="nav-link">
+        <NavLink to="/signup" className="nav-link">
           here
         </NavLink>
         .

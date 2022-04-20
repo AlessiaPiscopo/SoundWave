@@ -1,0 +1,14 @@
+.featured-artists {
+    margin: 0 30px 20px 30px;
+}
+
+.featured-artists .title {
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.featured-artists .artist-list {
+    display: flex;
+    gap: 35px;
+    padding-right: 30px;
+}
