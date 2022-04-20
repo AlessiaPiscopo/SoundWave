@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
+// styles
+import "./ArtistDashboard.css";
+
 // components
 import UploadAlbumForm from "./UploadAlbumForm";
 
@@ -23,22 +26,23 @@ const ArtistDashboard = () => {
 
   return (
     <div className="artist-dashboard">
-        <h1>My Dashboard</h1>
+      <h1 className="title">My Dashboard</h1>
 
-      <h2>Welcome {user.email}! This is your dashboard.</h2>
+      {/* <h2>Welcome {user.email}! This is your dashboard.</h2> */}
 
-      <div className="column-1">
-        <div className="add-album-or-track">
-          <button onClick={handleAlbumClicked} className="btn">
-            Add an album
-          </button>
+      <p className="add-new">Add new: </p>
+      <div className="add-new-container">
+        <button onClick={handleAlbumClicked} className="btn action-btn">
+          album
+        </button>
 
-          {/* <button onClick={handleTrackClicked} className="btn">
-            or add a track
-          </button> */}
+        <button className="btn action-btn">track</button>
 
-          {addAlbumClicked && <UploadAlbumForm />}
-        </div>
+        <button className="btn action-btn">show</button>
+
+        <button className="btn action-btn">merch</button>
+
+        {addAlbumClicked && <UploadAlbumForm />}
       </div>
     </div>
   );

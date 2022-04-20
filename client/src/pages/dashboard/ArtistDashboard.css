@@ -1,0 +1,25 @@
+.artist-dashboard {
+    height: 100vh;
+    /* width: 100%;
+    margin: auto; */
+}
+
+.artist-dashboard .title {
+    font-size: 30px;
+    color: var(--color-opal);
+    font-family: Dokdo, Menlo, monospace;
+    padding-bottom: 20px;
+}
+
+.artist-dashboard .add-new {
+    padding-bottom: 15px;
+}
+
+/* .artist-dashboard .add-new-container {
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+} */
+
+.artist-dashboard .action-btn {
+    margin-right: 20px;
+}

@@ -6,8 +6,6 @@ import "./ArtistDiscography.css";
 
 // components
 import ArtistDashboard from "../dashboard/ArtistDashboard";
-// import UploadAlbumCover from "../dashboard/UploadAlbumCover";
-// import UploadAlbumForm from "../dashboard/UploadAlbumForm";
 
 const ArtistDiscography = ({ artist }) => {
   const [error, setError] = useState(false);
@@ -45,10 +43,8 @@ const ArtistDiscography = ({ artist }) => {
               </div>
             );
           })}
-          <div className="dashboard">
-            <h1>My Dashboard</h1>
-          </div>
         </div>
+        <ArtistDashboard />
       </div>
     </>
   );

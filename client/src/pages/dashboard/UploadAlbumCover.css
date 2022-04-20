@@ -1,0 +1,19 @@
+.upload-album-cover {
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.upload-album-cover .album-cover {
+    padding-bottom: 10px;
+}
+
+.upload-album-cover .form-item {
+    display: flex;
+    /* margin-left: auto; */
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+
+.upload-album-cover .album-cover-img {
+    width: fit-content;
+}

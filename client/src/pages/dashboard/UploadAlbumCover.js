@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { storage } from "../../firebase/firebase-config";
 import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
 import { v4 } from "uuid";
+import "./UploadAlbumCover.css";
 
 const UploadAlbumCover = () => {
   const [newAlbumCover, setNewAlbumCover] = useState(null);
@@ -42,15 +43,21 @@ const UploadAlbumCover = () => {
   return (
     <div className="upload-album-cover">
       <div className="album-cover">album cover:</div>
-      <input
-        type="file"
-        onChange={(event) => setNewAlbumCover(event.target.files[0])}
-      />
-      <button onClick={uploadAlbumCover}>upload</button>
+
+      <div className="form-item">
+        <input
+          className="input-field"
+          type="file"
+          onChange={(event) => setNewAlbumCover(event.target.files[0])}
+        />
+        <button className="btn" onClick={uploadAlbumCover}>
+          upload
+        </button>
+      </div>
 
       {/* DISPLAY IMAGES */}
       {albumCoversList.map((url) => {
-        return <img src={url} />;
+        return <img src={url} className="album-cover-img" />;
       })}
     </div>
   );

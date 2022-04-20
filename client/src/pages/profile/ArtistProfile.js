@@ -45,6 +45,8 @@ const ArtistProfile = () => {
               <span>shows</span>
               <span>merch</span>
               <span>community</span>
+              {/* conditionally render this link */}
+              <span>my dashboard</span>
             </nav>
           </header>
 

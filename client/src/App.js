@@ -35,7 +35,7 @@ const App = () => {
 
               <Route path="/login">
                 {!user && <Login />}
-                {user && <Redirect to="/dashboard" />}
+                {user && <Redirect to="/" />}
               </Route>
 
               <Route path="/dashboard">

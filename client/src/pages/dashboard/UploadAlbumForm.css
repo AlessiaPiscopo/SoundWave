@@ -1,3 +1,30 @@
-.upload-album-form {
-    width: 400px;
+.upload-album {
+    /* width: 400px; */
+    display: flex;
+    padding-top: 30px;
+    /* margin: auto; */
+    justify-content: center;
+    /* margin: auto; */
+    /* border: 2px solid green; */
+}
+
+.upload-album .form {
+    display: flex;
+}
+
+.upload-album .upload-album-title {
+    padding-bottom: 30px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.upload-album .form-item {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 325px;
+}
+
+.upload-album .input-field {
+   width: 200px;
 }

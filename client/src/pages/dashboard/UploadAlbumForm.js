@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "./UploadAlbumForm.css";
 import UploadAlbumCover from "./UploadAlbumCover";
-// import UploadAlbumCover2 from "./UploadAlbumCover2";
-// import { useAuthContext } from "../hooks/useAuthContext";
 import { useAuthContext } from "../../hooks/useAuthContext";
 
 // firebase
 import { db, storage } from "../../firebase/firebase-config";
+
 import {
   collection,
   addDoc,
@@ -21,23 +20,31 @@ const UploadAlbumForm = () => {
   const { user } = useAuthContext();
   // state for the entire album form??
   // this should be newAlbumName:
-  const [newAlbum, setNewAlbum] = useState("");
+  // const [newAlbum, setNewAlbum] = useState("");
+  const [albumName, setAlbumName] = useState("");
+  const [artistName, setArtistName] = useState("");
+
   const usersCollectionRef = collection(db, "users");
 
-  // const [newAlbumCover, setNewAlbumCover] = useState(null);
-
+  // add new album to "albums" collection
   const handleSubmit = async (ev) => {
     ev.preventDefault();
-    await addDoc(collection(db, "albums"), { albumName: newAlbum });
+    await addDoc(collection(db, "albums"), {
+      albumName: albumName,
+      artistName: artistName,
+    });
+
     // clear form input field
-    setNewAlbum("");
+    setAlbumName("");
+
+    // post new album to "users" collection
     const data = await getDocs(usersCollectionRef);
     data.docs.map((document) => {
       // console.log({ ...doc.data(), id: doc.id });
       const documentRef = doc(db, "users", document.id);
       console.log(document.data().email);
       if (user.email === document.data().email) {
-        // same pattern for rest of files/ stuff to update: 
+        // same pattern for rest of files/ stuff to update:
         updateDoc(documentRef, {
           albums: {
             // document.data().albums.push
@@ -49,15 +56,33 @@ const UploadAlbumForm = () => {
   };
 
   return (
-    <div className="upload-album-form">
-      <form onSubmit={handleSubmit}>
-        <span className="album-name">album name:</span>
-        <input
-          type="text"
-          required
-          onChange={(ev) => setNewAlbum(ev.target.value)}
-          value={newAlbum}
-        />
+    <div className="upload-album">
+      <form className="form" onSubmit={handleSubmit}>
+        <p className="upload-album-title">Upload An Album</p>
+
+        <UploadAlbumCover />
+
+        <div className="form-item">
+          <span className="album-name">album name: </span>
+          <input
+            className="input-field"
+            type="text"
+            // required
+            onChange={(ev) => setArtistName(ev.target.value)}
+            value={artistName}
+          />
+        </div>
+
+        <div className="form-item">
+          <span className="album-artist">artist name: </span>
+          <input
+            type="text"
+            className="input-field"
+            // required
+            onChange={(ev) => setAlbumName(ev.target.value)}
+            value={albumName}
+          />
+        </div>
         {/* <span className="album-cover">album cover:</span> */}
         {/* <input
           type="file"
@@ -65,8 +90,7 @@ const UploadAlbumForm = () => {
         /> */}
         {/* <button onClick={uploadAlbumCover}>Upload Image</button> */}
 
-        <UploadAlbumCover />
-        <button>submit</button>
+        <button className="btn">submit</button>
       </form>
       {/* <UploadAlbumTracks /> */}
 
