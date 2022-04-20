@@ -4,6 +4,11 @@ import { useAuthContext } from "../../hooks/useAuthContext";
 // components
 import UploadAlbumForm from "./UploadAlbumForm";
 
+// TODO: make artist dashboard same as artist profile page, BUT if currentUser, add buttons/options to EDIT profile, the VIEW profile preview
+// maybe: account icon shows 2 options:
+//   dashboard
+//   view profile
+
 const ArtistDashboard = () => {
   const { user } = useAuthContext();
   const [addAlbumClicked, setAddAlbumClicked] = useState(false);

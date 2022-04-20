@@ -1,14 +1,15 @@
 .sidebar-content {
-    width: 200px;
-    border: 1px solid pink;
+    /* border: 1px solid pink; */
+    width: 150px;
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.sidebar .profile-pic {
-    width: 200px;
-    height: 200px;
+.sidebar .profile-pic img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
 }
 
 .sidebar .artist-name {

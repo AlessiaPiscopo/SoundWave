@@ -17,6 +17,7 @@ const firebaseConfig = {
 
 // Initialize Firebase by calling the initializeApp function and pass in the firebaseConfig option
 const app = initializeApp(firebaseConfig);
+
 // Pass app to getFirestore to populate db with all of the Firestore information from app
 export const db = getFirestore(app);
 export const auth = getAuth(app);

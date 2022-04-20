@@ -1,3 +1,4 @@
+// for GETTING documents
 import { useCollection } from "../hooks/useCollection";
 import { Link } from "react-router-dom";
 

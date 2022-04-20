@@ -1,10 +1,11 @@
+// a custom hook to set up realtime data with our database!
+
 import { useState, useEffect } from "react";
 
 // firebase
 import { db } from "../firebase/firebase-config";
 import { collection, onSnapshot, getDocs } from "firebase/firestore";
 
-// a custom hook to set up realtime data with our database!
 export const useCollection = (coll) => {
   const [documents, setDocuments] = useState(null);
 

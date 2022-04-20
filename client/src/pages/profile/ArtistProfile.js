@@ -1,15 +1,15 @@
-// ArtistMusic, ArtistShows components
-
-// The Artist page defaults to the "music" tab in the menubar, which displays a grid of the artist's discography.
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 // styles & images
 import "./ArtistProfile.css";
-// import AlvvaysBanner from "../../assets/alvvays/banner.png";
-import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+
+// components
 import ArtistDiscography from "./ArtistDiscography";
 import ArtistSidebar from "./ArtistSidebar";
+
+// The Artist page defaults to the "music" tab in the menubar, which displays a grid of the artist's discography.
 
 const ArtistProfile = () => {
   const [error, setError] = useState(false);
@@ -36,7 +36,9 @@ const ArtistProfile = () => {
       {artist && (
         <div className="artist-profile">
           <header>
-            <div className="banner-img">~~~~~~~banner img~~~~~~~~~</div>
+            <div className="banner">
+              <span className="banner-text"></span>
+            </div>
             {/* TODO: change spans to navlinks */}
             <nav className="menu-bar">
               <span>music</span>

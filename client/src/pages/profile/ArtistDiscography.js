@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import styled from "styled-components";
+
+// styles
+import "./ArtistDiscography.css";
 
 const ArtistDiscography = () => {
   const [error, setError] = useState(false);
@@ -21,7 +23,7 @@ const ArtistDiscography = () => {
   }, [artistId]);
 
   return (
-    <ArtistDiscographyContainer className="artist-discography">
+    <div className="artist-discography">
       {artistAlbums.map((album) => {
         return (
           <div className="album-card">
@@ -36,17 +38,8 @@ const ArtistDiscography = () => {
           </div>
         );
       })}
-    </ArtistDiscographyContainer>
+    </div>
   );
 };
-
-const ArtistDiscographyContainer = styled.div`
-  border: 2px solid green;
-  /* width: 800px; */
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-`;
 
 export default ArtistDiscography;

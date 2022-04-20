@@ -12,12 +12,12 @@ const Signup = () => {
   const [password, setPassword] = useState("");
 
   const [artistName, setArtistName] = useState("");
-  const [artistUsername, setArtistUsername] = useState("");
+  // const [artistUsername, setArtistUsername] = useState("");
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
-    signup(email, password);
-    console.log(email, password, artistName, artistUsername);
+    signup(artistName, email, password);
+    console.log(artistName, email, password);
   };
 
   return (
@@ -29,7 +29,7 @@ const Signup = () => {
         <input
           required
           type="text"
-          placeholder="artist/band name"
+          placeholder="artist name"
           onChange={(ev) => {
             setArtistName(ev.target.value);
           }}
@@ -38,7 +38,7 @@ const Signup = () => {
 
         {/* -------------------- */}
 
-        <input
+        {/* <input
           required
           type="text"
           placeholder="username"
@@ -46,7 +46,7 @@ const Signup = () => {
             setArtistUsername(ev.target.value);
           }}
           value={artistUsername}
-        />
+        /> */}
 
         {/* -------------------- */}
 
