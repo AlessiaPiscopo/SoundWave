@@ -17,8 +17,9 @@ const Homepage = () => {
             <div className="logo-text">SoundWave</div>
           </div>
           <p className="about">
-            An online record store and music community where passionate fans
-            discover, connect with, and directly support the artists they love.
+            An online music community where artists can showcase their work,
+            discover new music, and build meaningful connections.
+            {/* An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */}
           </p>
         </div>
       </PageWrapper>
