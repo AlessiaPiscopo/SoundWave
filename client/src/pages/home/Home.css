@@ -1,4 +1,4 @@
-.page-wrapper {
+.background {
     position: relative;
 }
 
@@ -22,15 +22,14 @@
     color: var(--text-color);
 }
 
-.logo-container {
-    
-}
+/* .logo-container {   
+} */
 
-.logo-img {
-}
+/* .logo-img {
+} */
 
 .logo-text {
-    font-size: 80px;
+    font-size: 100px;
     color: var(--color-opal);
     font-family: Dokdo, Menlo, monospace;
 }
@@ -38,8 +37,9 @@
 .about {
     display: flex;
     color: var(--text-color);
-    /* width: 257px; */
-    width: 30vw;
+    max-width: 375px;
+    width: 65vw;
+    /* width: 30vw; */
     text-align: center;
     margin-bottom: 75px;
     margin-top: 5px;

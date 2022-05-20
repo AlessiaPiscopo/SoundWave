@@ -11,12 +11,9 @@ const Discover = () => {
     <div className="discover">
       <p className="heading">Discover</p>
       {/* <ExploreByGenre /> */}
-
       {/* Featured Artists */}
       <ExploreByArtist />
-
       <GenreDropdown />
-
       <SearchByGenre />
     </div>
   );

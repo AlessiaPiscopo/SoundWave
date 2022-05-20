@@ -9,7 +9,7 @@ import pedalsBg from "../../assets/images/pedals-bg.jpg";
 const Homepage = () => {
   return (
     <div>
-      <PageWrapper className="page-wrapper">
+      <Background className="background">
         <div className="black-overlay"></div>
         <div className="welcome-container">
           <p className="welcome-text">Welcome to</p>
@@ -19,16 +19,16 @@ const Homepage = () => {
           <p className="about">
             An online music community where artists can showcase their work,
             discover new music, and build meaningful connections.
-            {/* An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */}
+            {/* Artists & Fans: An online record store and music community where passionate fans discover, connect with, and directly support the artists they love. */}
           </p>
         </div>
-      </PageWrapper>
+      </Background>
       <Discover />
     </div>
   );
 };
 
-const PageWrapper = styled.div`
+const Background = styled.div`
   min-height: 100vh;
   background: url(${pedalsBg}) no-repeat center center fixed;
   background-size: cover;

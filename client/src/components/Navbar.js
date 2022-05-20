@@ -4,10 +4,10 @@ import { useAuthContext } from "../hooks/useAuthContext";
 
 // styles, images & icons
 import "./Navbar.css";
-import SoundWaveWhite from "./../assets/images/logo-img-white.png";
+import SoundWaveWhite from "./../assets/graphics/logo-img-white.png";
 import AccountIcon from "./../assets/icons/account.png";
 import BellIcon from "./../assets/icons/bell.png";
-import MagnifyIcon from "./../assets/icons/magnify.png";
+// import MagnifyIcon from "./../assets/icons/magnify.png";
 
 const Navbar = () => {
   const { user } = useAuthContext();
@@ -30,7 +30,7 @@ const Navbar = () => {
         </li>
 
         <div className="links-right">
-          <img src={MagnifyIcon} alt="magnify icon" className="icons" />
+          {/* <img src={MagnifyIcon} alt="magnify icon" className="icons" /> */}
           {user ? (
             <>
               <img src={BellIcon} alt="bell icon" className="icons" />
