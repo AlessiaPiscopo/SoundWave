@@ -1,5 +1,6 @@
 # SoundWave
 ![Screenshot-1](screenshot-1.png)
+![Screenshot-2](screenshot-2.png)
 
 Inspired by Bandcamp, SoundWave is an online music community where independent musicians can showcase their work, discover new music, and build meaningful connections with other artists. 
 
@@ -19,6 +20,8 @@ Capstone project for the Concordia University Web Development Diploma. This proj
   - Showcase their discography
   - Upload new albums, including track lists, cover art, and audio files 
   - Post upcoming tour dates
+
+![Screenshot-3](screenshot-3.png)
 
 - Discover new artists: 
   - Search by artist, genre, or track
